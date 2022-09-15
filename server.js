@@ -7,10 +7,13 @@ const session = require('express-session');
 require('dotenv').config({ path: './.env' });
 const technologies = require('./routes/technologies.routes');
 
+// eslint-disable-next-line no-undef
 let uriDB = process.env.DB_URI;
+// eslint-disable-next-line no-undef
 let secretKey = process.env.EXPRESS_SESSION_SECRET;
 
 const app = express();
+// eslint-disable-next-line no-undef
 const server = app.listen(process.env.PORT || 8000, () => {
   console.log('Server is running...');
 });
@@ -40,6 +43,7 @@ db.on('error', (err) => {
 app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+// eslint-disable-next-line no-undef
 app.use(express.static(path.join(__dirname, '/client/build')));
 app.use(
   session({
@@ -53,6 +57,7 @@ app.use(
 app.use('/api', technologies);
 
 app.get('*', (req, res) => {
+  // eslint-disable-next-line no-undef
   res.sendFile(path.join(__dirname + '/client/build/index.html'));
 });
 
