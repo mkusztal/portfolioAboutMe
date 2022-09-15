@@ -5,12 +5,12 @@ const mongoose = require('mongoose');
 const MongoStore = require('connect-mongo');
 const session = require('express-session');
 require('dotenv').config({ path: './.env' });
-
-const app = express();
-let uriDB = process.env.DB_URI;
-let secretKey = process.env.EXPRESS_SESSION_SECRET;
 const technologies = require('./routes/technologies.routes');
 
+let uriDB = process.env.DB_URI;
+let secretKey = process.env.EXPRESS_SESSION_SECRET;
+
+const app = express();
 const server = app.listen(process.env.PORT || 8000, () => {
   console.log('Server is running...');
 });
@@ -20,7 +20,7 @@ mongoose.connect(uriDB, {
   useUnifiedTopology: true,
 });
 
-//mongoose.set('useCreateIndex', true);
+mongoose.set('autoIndex', true);
 
 const sessionStore = MongoStore.create({
   mongoUrl: uriDB,
