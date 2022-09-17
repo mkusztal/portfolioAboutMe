@@ -39,7 +39,6 @@ exports.getTechnologyBySearch = async (req, res) => {
 
 exports.addTechnology = async (req, res) => {
   const { title, level } = sanitize(req.body);
-
   const fileType = req.file ? await getImageFileType(req.file) : 'unknown';
   const isFile =
     req.file &&
@@ -100,7 +99,7 @@ exports.removeTechnologyById = async (req, res) => {
       return res.status(404).json({ message: 'Not found...' });
     }
     await Technology.deleteOne({ _id: req.params.id });
-    res.json({ message });
+    res.json({ message: 'OK' });
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
