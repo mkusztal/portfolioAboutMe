@@ -1,8 +1,12 @@
+//import { Routes, Route } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
+import NavBar from './components/layout/NavBar/NavBar';
+
 const App = () => {
   return (
-    <div className="App">
-      <h1>Hello World</h1>
-    </div>
+    <Container>
+      <NavBar />
+    </Container>
   );
 };
 
