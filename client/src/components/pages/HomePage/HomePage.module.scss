@@ -1,0 +1,15 @@
+.root {
+  min-height: 590px;
+  padding: 200px;
+
+  text-align: center;
+  .header {
+    color: white;
+    font-style: italic;
+  }
+
+  .text {
+    color: white;
+    font-style: normal;
+  }
+}
