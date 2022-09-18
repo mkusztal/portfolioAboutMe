@@ -2,9 +2,11 @@
 import { Container } from 'react-bootstrap';
 import NavBar from './components/layout/NavBar/NavBar';
 
-const App = () => {
+import styles from './App.module.scss';
+
+export const App = () => {
   return (
-    <Container>
+    <Container className={styles.root}>
       <NavBar />
     </Container>
   );

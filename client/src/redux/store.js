@@ -1,7 +1,7 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
-import initialState from './initialState';
 import technologiesReducer from './technologiesRedux';
+import initialState from './initialState';
 import userReducer from './userRedux';
 
 // combine reducers
