@@ -1,9 +1,9 @@
 import initialState from './initialState';
 import { API_URL } from '../config';
 
-export const getInformations = ({ technologies }) => technologies;
+export const getInformations = ({ informations }) => informations;
 
-const createActionName = (actionName) => `app/technologies/${actionName}`;
+const createActionName = (actionName) => `app/informations/${actionName}`;
 const UPDATE_INFORMATION = createActionName('UPDATE_INFORMATION');
 
 export const updateInformationById = (payload) => ({

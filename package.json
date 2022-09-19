@@ -30,6 +30,7 @@
   },
   "scripts": {
     "start": "nodemon server.js",
+    "build": "cd client && npm run build",
     "test": "jest"
   },
   "devDependencies": {
