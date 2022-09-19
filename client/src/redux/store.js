@@ -3,9 +3,14 @@ import thunk from 'redux-thunk';
 import technologiesReducer from './technologiesRedux';
 import initialState from './initialState';
 import userReducer from './userRedux';
+import informationsReducer from './informationsRedux';
 
 // combine reducers
-const subreducers = { technologies: technologiesReducer, user: userReducer };
+const subreducers = {
+  technologies: technologiesReducer,
+  informations: informationsReducer,
+  user: userReducer,
+};
 
 const reducer = combineReducers(subreducers);
 

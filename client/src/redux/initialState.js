@@ -1,5 +1,6 @@
 const initialState = {
   technologies: [],
+  informations: [],
   user: null,
 };
 
