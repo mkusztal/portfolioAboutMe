@@ -1,4 +1,5 @@
 import { Col, Row, Button, Image } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import styles from './HomePage.module.scss';
 const HomePage = () => {
   return (
@@ -11,11 +12,11 @@ const HomePage = () => {
         <Col>
           <h3 className={styles.header}>Hi! I'm Maciej Kusztal</h3>
           <p className={styles.text}>
-            I'm Junior Full Stack Web Developer who is looking for...
+            I'm Junior Full Stack Web Developer who is looking for Junior Backend Developer...
           </p>
-          <Button variant="warning" className="pt-2 m-3">
-            Read more
-          </Button>
+          <Link to={'/aboutme'}>
+            <Button variant="warning">Read more</Button>
+          </Link>
         </Col>
       </Row>
     </div>

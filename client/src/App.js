@@ -4,6 +4,7 @@ import NavBar from './components/layout/NavBar/NavBar';
 
 import styles from './App.module.scss';
 import HomePage from '../src/components/pages/HomePage/HomePage';
+import AboutMe from './components/pages/AboutMe/AboutMe';
 
 export const App = () => {
   return (
@@ -11,6 +12,7 @@ export const App = () => {
       <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/aboutme" element={<AboutMe />} />
       </Routes>
     </Container>
   );
