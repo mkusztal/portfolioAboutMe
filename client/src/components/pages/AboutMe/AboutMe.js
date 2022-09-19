@@ -11,8 +11,8 @@ import {
 } from '../../../redux/technologiesRedux';
 
 import styles from './AboutMe.module.scss';
-import AdminData from '../../features/AdminData';
-import TechnologyCard from '../../features/TechnologyCard';
+import AdminData from '../../features/AdminData/AdminData';
+import TechnologyCard from '../../features/TechnologyCar/TechnologyCard';
 
 const AboutMe = () => {
   const adminData = useSelector(getInformations);

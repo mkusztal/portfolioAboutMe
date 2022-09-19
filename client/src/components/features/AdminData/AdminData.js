@@ -1,5 +1,5 @@
 import { Row, Col, Image } from 'react-bootstrap';
-import { IMAGES_URL } from '../../config';
+import { IMAGES_URL } from '../../../config';
 const AdminData = ({ title, text, photo }) => {
   return (
     <div>

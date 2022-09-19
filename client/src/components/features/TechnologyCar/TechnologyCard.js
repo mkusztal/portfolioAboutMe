@@ -1,5 +1,5 @@
 import { Card } from 'react-bootstrap';
-import { IMAGES_URL } from '../../config';
+import { IMAGES_URL } from '../../../config';
 
 const TechnologyCard = ({ title, image, level }) => {
   return (

@@ -13,11 +13,12 @@ exports.getLoggedUser = async (req, res) => {
 
 exports.register = async (req, res) => {
   try {
-    const { login, password } = req.body;
+    const { login, password, email } = req.body;
 
     const isLogin = login && typeof login === 'string';
+    const isEmail = email && typeof email === 'string';
     const isPassword = password && typeof password === 'string';
-    const isDataValid = isLogin && isPassword;
+    const isDataValid = isLogin && isPassword && isEmail;
 
     if (isDataValid) {
       const userWithLogin = await User.findOne({ login });
@@ -30,8 +31,9 @@ exports.register = async (req, res) => {
       const user = new User({
         login,
         password: await bcrypt.hash(password, 10),
+        email,
       });
-
+      await user.save();
       res.status(201).json({ message: 'User created ' + user.login });
     } else {
       res.status(400).json({ message: 'Bad request' });
