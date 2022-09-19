@@ -12,7 +12,7 @@ import {
 
 import styles from './AboutMe.module.scss';
 import AdminData from '../../features/AdminData/AdminData';
-import TechnologyCard from '../../features/TechnologyCar/TechnologyCard';
+import TechnologyCard from '../../features/TechnologyCard/TechnologyCard';
 
 const AboutMe = () => {
   const adminData = useSelector(getInformations);

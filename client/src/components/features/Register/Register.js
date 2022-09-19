@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Form, Button, Alert, Spinner } from 'react-bootstrap';
 import { API_URL } from '../../../config';
+import styles from './Register.module.scss';
 
 const Register = () => {
   const [login, setLogin] = useState('');
@@ -23,7 +24,7 @@ const Register = () => {
     };
 
     setStatus('loading');
-    fetch(`${API_URL}api/auth/register`, options) // tutaj jest błąd!
+    fetch(`${API_URL}api/auth/register`, options)
       .then((res) => {
         if (res.status === 201) {
           setStatus('success');
@@ -42,7 +43,7 @@ const Register = () => {
 
   return (
     <Form className="col-12 col-sm-4 mx-auto" onSubmit={handleSubmit}>
-      <h1 className="my-4">Register</h1>
+      <h1 className={styles.title}>Register</h1>
 
       {status === 'success' && (
         <Alert variant="success">
@@ -79,7 +80,7 @@ const Register = () => {
       )}
 
       <Form.Group className="mb-3" controlId="formLogin">
-        <Form.Label>Login</Form.Label>
+        <Form.Label className={styles.text}>Login</Form.Label>
         <Form.Control
           type="text"
           value={login}
@@ -89,7 +90,7 @@ const Register = () => {
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formPassword">
-        <Form.Label>Password</Form.Label>
+        <Form.Label className={styles.text}>Password</Form.Label>
         <Form.Control
           type="password"
           value={password}
@@ -99,7 +100,7 @@ const Register = () => {
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formEmail">
-        <Form.Label>Email</Form.Label>
+        <Form.Label className={styles.text}>Email</Form.Label>
         <Form.Control
           type="email"
           value={email}
