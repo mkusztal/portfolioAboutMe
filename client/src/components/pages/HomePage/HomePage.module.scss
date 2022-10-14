@@ -1,15 +1,42 @@
-.root {
-  min-height: 590px;
-  padding: 200px;
+@import '../../../styles/variables.module.scss';
 
-  text-align: center;
-  .header {
-    color: white;
-    font-style: italic;
+.root {
+  position: relative;
+  min-height: 580px;
+
+  .leftColumn {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+
+    img {
+      height: 300px;
+      width: 300px;
+      object-fit: scale-down;
+      opacity: 0.8;
+      border-radius: 400px;
+    }
   }
 
-  .text {
-    color: white;
-    font-style: normal;
+  .rightColumn {
+    display: block;
+    position: absolute;
+    top: 35%;
+    right: 10%;
+
+    .text {
+      color: $text-color;
+      font-style: normal;
+
+      span {
+        color: $text-hover-color;
+      }
+    }
+
+    .button {
+      position: absolute;
+      right: 50%;
+      padding: 10px 0 0 0;
+    }
   }
 }
