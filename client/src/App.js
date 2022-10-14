@@ -1,5 +1,4 @@
 import { Routes, Route } from 'react-router-dom';
-import { Container } from 'react-bootstrap';
 import NavBar from './components/layout/NavBar/NavBar';
 
 import styles from './App.module.scss';
@@ -11,7 +10,7 @@ import Logout from './components/features/Logout/Logout';
 
 export const App = () => {
   return (
-    <Container className={styles.root}>
+    <div className={styles.root}>
       <NavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
@@ -20,7 +19,7 @@ export const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/logout" element={<Logout />} />
       </Routes>
-    </Container>
+    </div>
   );
 };
 

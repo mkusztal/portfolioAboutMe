@@ -1,3 +1,27 @@
+@import '../../../styles/variables.module.scss';
+
 .root {
-  min-width: 500px;
+  color: $text-color;
+  display: flex;
+  padding: 10px 0 0 20px;
+
+  .links {
+    position: relative;
+    font-size: 20px;
+    margin: 10px 0 0 10px;
+    left: 60%;
+
+    .navlink {
+      color: $text-color;
+    }
+
+    .navlink:link {
+      text-decoration: none;
+      margin: 5px;
+    }
+
+    .navlink:hover {
+      color: $text-hover-color;
+    }
+  }
 }
