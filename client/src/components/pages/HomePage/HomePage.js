@@ -1,6 +1,6 @@
-import { Col, Row, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import styles from './HomePage.module.scss';
+
 const HomePage = () => {
   return (
     <div className={styles.root}>
@@ -18,8 +18,8 @@ const HomePage = () => {
           </p>
         </div>
 
-        <Link className={styles.button} to={'/aboutme'}>
-          <Button variant="warning">Read more</Button>
+        <Link to={'/aboutme'}>
+          <button className={styles.button}>Read Me</button>
         </Link>
       </div>
     </div>
