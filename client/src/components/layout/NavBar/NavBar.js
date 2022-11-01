@@ -7,37 +7,54 @@ import styles from './NavBar.module.scss';
 const NavBar = () => {
   const user = useSelector(getUser);
   return (
-    <nav className={styles.root}>
+    <header>
       <h1>Portfolio</h1>
-      <div className={styles.links}>
-        <NavLink className={styles.navlink} to="/">
-          Home
-        </NavLink>
-        <NavLink className={styles.navlink} to="/aboutme">
-          About me
-        </NavLink>
-        <NavLink className={styles.navlink} to="/contact">
-          Contact
-        </NavLink>
-        {!user && (
-          <NavLink className={styles.navlink} to="/register">
-            Register
-          </NavLink>
-        )}
+      <nav>
+        <ul className={styles.links}>
+          <li>
+            <NavLink className={styles.navlink} to="/">
+              Home
+            </NavLink>
+          </li>
 
-        {!user && (
-          <NavLink className={styles.navlink} to="/login">
-            Login
-          </NavLink>
-        )}
+          <li>
+            <NavLink className={styles.navlink} to="/aboutme">
+              About me
+            </NavLink>
+          </li>
 
-        {user && (
-          <NavLink className={styles.navlink} to="/logout">
-            Logout
-          </NavLink>
-        )}
-      </div>
-    </nav>
+          <li>
+            <NavLink className={styles.navlink} to="/contact">
+              Contact
+            </NavLink>
+          </li>
+
+          <li>
+            {!user && (
+              <NavLink className={styles.navlink} to="/register">
+                Register
+              </NavLink>
+            )}
+          </li>
+
+          <li>
+            {!user && (
+              <NavLink className={styles.navlink} to="/login">
+                Login
+              </NavLink>
+            )}
+          </li>
+
+          <li>
+            {user && (
+              <NavLink className={styles.navlink} to="/logout">
+                Logout
+              </NavLink>
+            )}
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 };
 
