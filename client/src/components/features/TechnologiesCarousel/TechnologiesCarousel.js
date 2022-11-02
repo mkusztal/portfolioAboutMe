@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { TechnologyData } from './TechnologyData';
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
-const TechnologiesCarousel = ({ technologies }) => {
+export const TechnologiesCarousel = ({ technologies }) => {
   const [current, setCurrent] = useState(0);
   const length = technologies.length;
 
@@ -52,4 +52,4 @@ const TechnologiesCarousel = ({ technologies }) => {
   );
 };
 
-export default TechnologiesCarousel;
+// export default TechnologiesCarousel;

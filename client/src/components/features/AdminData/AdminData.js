@@ -1,22 +1,25 @@
-import { Row, Col, Image } from 'react-bootstrap';
-import { IMAGES_URL } from '../../../config';
-const AdminData = ({ title, text, photo }) => {
+import styles from './AdminData.module.scss';
+import { Link } from 'react-router-dom';
+
+const AdminData = () => {
   return (
-    <div>
-      <Row>
-        <Col>
-          <Image src={IMAGES_URL + photo} />
-        </Col>
-
-        <Col>
-          <h1>Hi!, I'm Maciej Kusztal</h1>
-
+    <div className={styles.root}>
+      <img src="/images/me.png" alt="me" />
+      <div className={styles.rightColumn}>
+        <div className={styles.text}>
+          <h3>
+            Hi! I'm <span>Maciej Kusztal</span>
+          </h3>
           <p>
-            <span>{title}</span>
-            {text}
+            I'm Junior Full Stack Web Developer who is looking for Junior
+            Backend Developer...
           </p>
-        </Col>
-      </Row>
+        </div>
+
+        <Link to={'/aboutme'}>
+          <button className={styles.button}>Read Me</button>
+        </Link>
+      </div>
     </div>
   );
 };
