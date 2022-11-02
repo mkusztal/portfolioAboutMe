@@ -4,9 +4,7 @@ import styles from './HomePage.module.scss';
 const HomePage = () => {
   return (
     <div className={styles.root}>
-      <div className={styles.leftColumn}>
-        <img src="/images/me.png" alt="me" />
-      </div>
+      <img src="/images/me.png" alt="me" />
       <div className={styles.rightColumn}>
         <div className={styles.text}>
           <h3>

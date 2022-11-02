@@ -1,29 +1,22 @@
 @import '../../../styles/variables.module.scss';
 
 .root {
-  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   min-height: 580px;
 
-  .leftColumn {
-    position: absolute;
-    top: 20%;
-    left: 15%;
-
-    img {
-      height: 300px;
-      width: 300px;
-      object-fit: scale-down;
-      opacity: 0.8;
-      border-radius: 400px;
-    }
+  img {
+    height: 300px;
+    width: 300px;
+    object-fit: scale-down;
+    opacity: 0.8;
+    border-radius: 400px;
   }
 
   .rightColumn {
     display: block;
-    position: absolute;
-    top: 35%;
-    right: 10%;
-
+    flex-basis: 30%;
     .text {
       color: $text-color;
       font-style: normal;
