@@ -20,36 +20,31 @@ export const TechnologiesCarousel = ({ technologies }) => {
   }
   return (
     <section className={styles.carousel}>
-      <div>
-        <FaArrowAltCircleLeft
-          className={styles.left_arrow}
-          onClick={prevSlide}
-        />
-        <FaArrowAltCircleRight
-          className={styles.right_arrow}
-          onClick={nextSlide}
-        />
-        {TechnologyData.map((technology, index) => {
-          return (
-            <div
-              className={
-                index === current
-                  ? styles.carousel__item_active
-                  : styles.carousel__item
-              }
-              key={index}
-            >
-              <img
-                src={technology.image}
-                alt="technology"
-                className={styles.image}
-              />
-            </div>
-          );
-        })}
-      </div>
+      <FaArrowAltCircleLeft className={styles.left_arrow} onClick={prevSlide} />
+      <FaArrowAltCircleRight
+        className={styles.right_arrow}
+        onClick={nextSlide}
+      />
+      {TechnologyData.map((technology, index) => {
+        return (
+          <div
+            className={
+              index === current
+                ? styles.carousel__item_active
+                : styles.carousel__item
+            }
+            key={index}
+          >
+            <img
+              src={technology.image}
+              alt="technology"
+              className={styles.image}
+            />
+          </div>
+        );
+      })}
     </section>
   );
 };
 
-// export default TechnologiesCarousel;
+export default TechnologiesCarousel;

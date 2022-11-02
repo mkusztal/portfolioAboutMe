@@ -3,12 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  .image {
-    width: 400px;
-    height: 200px;
-    border-radius: 10px;
-  }
+  height: 100vh;
 
   .right_arrow {
     position: absolute;
@@ -28,6 +23,12 @@
     z-index: 10;
     cursor: pointer;
     user-select: none;
+  }
+
+  .image {
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
   }
 
   .carousel__item {
