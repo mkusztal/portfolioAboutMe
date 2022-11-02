@@ -1,46 +1,19 @@
-import { Row } from 'react-bootstrap';
-import { useSelector, useDispatch } from 'react-redux';
-import { useEffect } from 'react';
-import {
-  getInformations,
-  fetchInformations,
-} from '../../../redux/informationsRedux';
-import {
-  getTechnologies,
-  fetchTechnologies,
-} from '../../../redux/technologiesRedux';
-
 import styles from './AboutMe.module.scss';
-import AdminData from '../../features/AdminData/AdminData';
-import TechnologyCard from '../../features/TechnologyCard/TechnologyCard';
 
 const AboutMe = () => {
-  const adminData = useSelector(getInformations);
-  const technologyData = useSelector(getTechnologies);
-
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchInformations());
-    dispatch(fetchTechnologies());
-  }, [dispatch]);
-
   return (
     <div className={styles.root}>
-      <Row className="pb-5">
-        {adminData.map((data) => (
-          <div key={data._id}>
-            <AdminData {...data} />
-          </div>
-        ))}
-      </Row>
-      <div className={styles.technology}>
-        <h1>Abilities</h1>
-        {technologyData.map((data) => (
-          <div key={data._id}>
-            <TechnologyCard {...data} />
-          </div>
-        ))}
+      <img src="/images/me.png" alt="me" />
+      <div className={styles.rightColumn}>
+        <div className={styles.text}>
+          <h3>
+            Hi! I'm <span>Maciej Kusztal</span>
+          </h3>
+          <p>
+            I'm Junior Full Stack Web Developer who is looking for Junior
+            Backend Developer...
+          </p>
+        </div>
       </div>
     </div>
   );

@@ -3,7 +3,11 @@
   min-height: 1000px;
   padding-top: 70px;
 
-  .technology {
-    color: black;
+  img {
+    height: 300px;
+    width: 300px;
+    object-fit: scale-down;
+    opacity: 0.8;
+    border-radius: 400px;
   }
 }
