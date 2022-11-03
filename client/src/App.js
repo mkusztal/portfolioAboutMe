@@ -7,6 +7,7 @@ import AboutMe from './components/pages/AboutMe/AboutMe';
 import Register from './components/features/Register/Register';
 import Login from './components/features/Login/Login';
 import Logout from './components/features/Logout/Logout';
+import Footer from './components/layout/Footer/Footer';
 
 export const App = () => {
   return (
@@ -19,6 +20,7 @@ export const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/logout" element={<Logout />} />
       </Routes>
+      <Footer />
     </div>
   );
 };
