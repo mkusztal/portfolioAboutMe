@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Form, Button, Alert, Spinner } from 'react-bootstrap';
 import { API_URL } from '../../../config';
 import styles from './Register.module.scss';
 
@@ -42,77 +41,59 @@ const Register = () => {
   };
 
   return (
-    <Form className="col-12 col-sm-4 mx-auto" onSubmit={handleSubmit}>
-      <h1 className={styles.title}>Register</h1>
+    <form>
+      <div className={styles.container}>
+        <h1>Sign Up</h1>
+        <p>Please fill in this form to create an account.</p>
 
-      {status === 'success' && (
-        <Alert variant="success">
-          <Alert.Heading>Success!</Alert.Heading>
-          <p>You have been successfully registered! You can log in now...</p>
-        </Alert>
-      )}
-
-      {status === 'serverError' && (
-        <Alert variant="danger">
-          <Alert.Heading>Something went wrong... </Alert.Heading>
-          <p>Unexpected error... Try again!</p>
-        </Alert>
-      )}
-
-      {status === 'clientError' && (
-        <Alert variant="danger">
-          <Alert.Heading>Not enough data</Alert.Heading>
-          <p>You have to fill all the fields</p>
-        </Alert>
-      )}
-
-      {status === 'loginError' && (
-        <Alert variant="warning">
-          <Alert.Heading>Login is already use</Alert.Heading>
-          <p>You have to use other login</p>
-        </Alert>
-      )}
-
-      {status === 'loading' && (
-        <Spinner animation="border" role="status" className="d-block mx-auto">
-          <span className="visually-hidden"></span>
-        </Spinner>
-      )}
-
-      <Form.Group className="mb-3" controlId="formLogin">
-        <Form.Label className={styles.text}>Login</Form.Label>
-        <Form.Control
+        <label for="email">
+          <b>Email</b>
+        </label>
+        <input
           type="text"
-          value={login}
-          onChange={(e) => setLogin(e.target.value)}
-          placeholder="Enter login"
-        />
-      </Form.Group>
-
-      <Form.Group className="mb-3" controlId="formPassword">
-        <Form.Label className={styles.text}>Password</Form.Label>
-        <Form.Control
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Password"
-        />
-      </Form.Group>
-
-      <Form.Group className="mb-3" controlId="formEmail">
-        <Form.Label className={styles.text}>Email</Form.Label>
-        <Form.Control
-          type="email"
+          placeholder="Enter Email"
+          name="email"
+          id="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="Email"
+          required
         />
-      </Form.Group>
 
-      <Button variant="primary" type="submit">
-        Submit
-      </Button>
-    </Form>
+        <label for="psw-repeat">
+          <b>Login</b>
+        </label>
+        <input
+          type="text"
+          placeholder="Enter Login"
+          name="login"
+          id="login"
+          value={login}
+          onChange={(e) => setLogin(e.target.value)}
+          required
+        />
+
+        <label for="psw">
+          <b>Password</b>
+        </label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="psw"
+          id="psw"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+
+        <button
+          type="submit"
+          className={styles.registerbtn}
+          onClick={handleSubmit}
+        >
+          Register
+        </button>
+      </div>
+    </form>
   );
 };
 

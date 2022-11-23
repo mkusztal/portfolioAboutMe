@@ -1,19 +1,23 @@
-import { Card } from 'react-bootstrap';
-import { IMAGES_URL } from '../../../config';
+import { useState } from 'react';
+import styles from './TechnologyCard.module.scss';
 
-const TechnologyCard = ({ title, image, level }) => {
+export const TechnologyCard = ({ name, level }) => {
+  const [style, setStyle] = useState({});
+
+  setTimeout(() => {
+    const newStyle = {
+      opacity: 1,
+      width: `${level}%`,
+    };
+
+    setStyle(newStyle);
+  }, 200);
   return (
-    <Card>
-      <Card.Img variant="top" src={IMAGES_URL + image} />
-      <Card.Body>
-        <div>
-          <Card.Title>{title}</Card.Title>
-
-          <Card.Text>{level}/100</Card.Text>
-        </div>
-      </Card.Body>
-    </Card>
+    <div className={styles.progress}>
+      <p>{name}</p>
+      <div className={styles.progress_done} style={style}>
+        {level}%
+      </div>
+    </div>
   );
 };
-
-export default TechnologyCard;

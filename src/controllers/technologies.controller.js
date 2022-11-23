@@ -1,7 +1,5 @@
 const Technology = require('../models/technologies.model');
-const getImageFileType = require('../utils/getImageFileType');
 const sanitize = require('mongo-sanitize');
-const fs = require('fs');
 
 exports.getAllTechnologies = async (req, res) => {
   try {
@@ -38,27 +36,19 @@ exports.getTechnologyBySearch = async (req, res) => {
 };
 
 exports.addTechnology = async (req, res) => {
-  const { title, level } = sanitize(req.body);
-  const fileType = req.file ? await getImageFileType(req.file) : 'unknown';
-  const isFile =
-    req.file &&
-    ['image/png', 'image/jpg', 'image/jpeg', 'image/git'].includes(fileType);
+  const { name, level } = sanitize(req.body);
 
-  const isDataValid = title && level && isFile;
+  const isDataValid = name && level;
 
   try {
     if (isDataValid) {
       const newTechnology = new Technology({
-        image: req.file.filename,
-        title: title,
+        name: name,
         level: level,
       });
       await newTechnology.save();
       res.json(newTechnology);
     } else {
-      if (req.file) {
-        fs.unlinkSync(`./public/uploads/${req.file.filename}`);
-      }
       res.status(400).json({ message: 'Bad request' });
     }
   } catch (err) {
@@ -67,21 +57,17 @@ exports.addTechnology = async (req, res) => {
 };
 
 exports.updateTechnology = async (req, res) => {
-  const { title, level } = req.body;
+  const { name, level } = req.body;
   try {
     const technology = await Technology.findById(req.params.id);
     if (!technology) {
-      if (req.file) {
-        fs.unlinkSync(`./public/uploads/${req.file.filename}`);
-      }
       res.status(400).json({ message: 'Bad request' });
     }
     await Technology.updateOne(
       { _id: req.params.id },
       {
         $set: {
-          image: req.file.filename,
-          title: title,
+          name: name,
           level: level,
         },
       }

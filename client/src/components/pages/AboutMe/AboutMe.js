@@ -1,6 +1,21 @@
 import styles from './AboutMe.module.scss';
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import {
+  fetchTechnologies,
+  getTechnologies,
+} from '../../../redux/technologiesRedux';
+import { TechnologyCard } from '../../features/TechnologyCard/TechnologyCard';
 
 const AboutMe = () => {
+  const techData = useSelector(getTechnologies);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchTechnologies());
+  }, [dispatch]);
+
   return (
     <div className={styles.root}>
       <img src="/images/me.png" alt="me" />
@@ -13,6 +28,13 @@ const AboutMe = () => {
             I'm Junior Full Stack Web Developer who is looking for Junior
             Backend Developer...
           </p>
+        </div>
+        <div className={styles.technologies}>
+          {techData.map((data) => (
+            <div key={data._id}>
+              <TechnologyCard {...data} />
+            </div>
+          ))}
         </div>
       </div>
     </div>

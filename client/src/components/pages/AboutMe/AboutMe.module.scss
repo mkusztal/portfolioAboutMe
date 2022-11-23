@@ -10,4 +10,11 @@
     opacity: 0.8;
     border-radius: 400px;
   }
+
+  .technologies {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }

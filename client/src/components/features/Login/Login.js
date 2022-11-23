@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { Form, Button, Alert, Spinner } from 'react-bootstrap';
 import { API_URL } from '../../../config';
 import { useDispatch } from 'react-redux';
 import { logIn } from '../../../redux/userRedux';
 import { useNavigate } from 'react-router-dom';
+import styles from '../Register/Register.module.scss';
 
 const Login = () => {
   const [login, setLogin] = useState('');
@@ -46,64 +46,102 @@ const Login = () => {
   };
 
   return (
-    <Form className="col-12 col-sm-4 mx-auto" onSubmit={handleSubmit}>
-      <h1 className="my-4">Login</h1>
+    // <Form className="col-12 col-sm-4 mx-auto" onSubmit={handleSubmit}>
+    //   <h1 className="my-4">Login</h1>
 
-      {status === 'success' && (
-        <Alert variant="success">
-          <Alert.Heading>Success!</Alert.Heading>
-          <p>You have been successfully logged!</p>
-        </Alert>
-      )}
+    //   {status === 'success' && (
+    //     <Alert variant="success">
+    //       <Alert.Heading>Success!</Alert.Heading>
+    //       <p>You have been successfully logged!</p>
+    //     </Alert>
+    //   )}
 
-      {status === 'serverError' && (
-        <Alert variant="danger">
-          <Alert.Heading>Something went wrong... </Alert.Heading>
-          <p>Unexpected error... Try again!</p>
-        </Alert>
-      )}
+    //   {status === 'serverError' && (
+    //     <Alert variant="danger">
+    //       <Alert.Heading>Something went wrong... </Alert.Heading>
+    //       <p>Unexpected error... Try again!</p>
+    //     </Alert>
+    //   )}
 
-      {status === 'clientError' && (
-        <Alert variant="danger">
-          <Alert.Heading>Incorrect data</Alert.Heading>
-          <p>Login or password are incorrect...</p>
-        </Alert>
-      )}
+    //   {status === 'clientError' && (
+    //     <Alert variant="danger">
+    //       <Alert.Heading>Incorrect data</Alert.Heading>
+    //       <p>Login or password are incorrect...</p>
+    //     </Alert>
+    //   )}
 
-      {status === 'loading' && (
-        <Spinner animation="border" role="status" className="d-block mx-auto">
-          <span className="visually-hidden"></span>
-        </Spinner>
-      )}
+    //   {status === 'loading' && (
+    //     <Spinner animation="border" role="status" className="d-block mx-auto">
+    //       <span className="visually-hidden"></span>
+    //     </Spinner>
+    //   )}
 
-      {status !== 'success' && (
-        <Form.Group>
-          <Form.Group className="mb-3" controlId="formLogin">
-            <Form.Label>Login</Form.Label>
-            <Form.Control
-              type="text"
-              value={login}
-              onChange={(e) => setLogin(e.target.value)}
-              placeholder="Enter login"
-            />
-          </Form.Group>
+    //   {status !== 'success' && (
+    //     <Form.Group>
+    //       <Form.Group className="mb-3" controlId="formLogin">
+    //         <Form.Label>Login</Form.Label>
+    //         <Form.Control
+    //           type="text"
+    //           value={login}
+    //           onChange={(e) => setLogin(e.target.value)}
+    //           placeholder="Enter login"
+    //         />
+    //       </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formPassword">
-            <Form.Label>Password</Form.Label>
-            <Form.Control
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="Password"
-            />
-          </Form.Group>
+    //       <Form.Group className="mb-3" controlId="formPassword">
+    //         <Form.Label>Password</Form.Label>
+    //         <Form.Control
+    //           type="password"
+    //           value={password}
+    //           onChange={(e) => setPassword(e.target.value)}
+    //           placeholder="Password"
+    //         />
+    //       </Form.Group>
 
-          <Button variant="primary" type="submit">
-            Login
-          </Button>
-        </Form.Group>
-      )}
-    </Form>
+    //       <Button variant="primary" type="submit">
+    //         Login
+    //       </Button>
+    //     </Form.Group>
+    //   )}
+    // </Form>
+    <form>
+      <div className={styles.container}>
+        <h1>Sign In</h1>
+        <label for="psw-repeat">
+          <b>Login</b>
+        </label>
+        <input
+          type="text"
+          placeholder="Enter Login"
+          name="login"
+          id="login"
+          value={login}
+          onChange={(e) => setLogin(e.target.value)}
+          required
+        />
+
+        <label for="psw">
+          <b>Password</b>
+        </label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="psw"
+          id="psw"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+
+        <button
+          type="submit"
+          className={styles.registerbtn}
+          onClick={handleSubmit}
+        >
+          Register
+        </button>
+      </div>
+    </form>
   );
 };
 
