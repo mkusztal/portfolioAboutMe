@@ -8,7 +8,12 @@ const NavBar = () => {
   const user = useSelector(getUser);
   return (
     <header>
-      <h1>Portfolio</h1>
+      {/* <h1>Portfolio</h1> */}
+      <img
+        className={styles.logo}
+        src="/images/ME_logo.png"
+        alt="moni_entertainment_logo"
+      ></img>
       <nav>
         <ul className={styles.links}>
           <li>
