@@ -1,9 +1,13 @@
-.carousel {
+.container {
   position: relative;
+  left: 15%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 300px;
+  margin: 50px 0 50px 0;
+  border: 2px solid red;
+  width: 70%;
 
   .right_arrow {
     position: absolute;
@@ -25,20 +29,26 @@
     user-select: none;
   }
 
-  .image {
-    width: 400px;
-    height: 200px;
-    border-radius: 10px;
-  }
+  .carousel {
+    display: flex;
+    flex-direction: row;
 
-  .carousel__item {
-    opacity: 0;
-    transition-duration: 1s ease;
-  }
+    .image {
+      width: 400px;
+      height: 200px;
+      border-radius: 10px;
+      margin: 0 10px 0 10px;
+    }
 
-  .carousel__item_active {
-    opacity: 1;
-    transition-duration: 1s;
-    transform: scale(1.08);
+    .carousel__item {
+      opacity: 0.5;
+      transition-duration: 1s ease;
+    }
+
+    .carousel__item_active {
+      opacity: 1;
+      transition-duration: 1s;
+      transform: scale(1.08);
+    }
   }
 }

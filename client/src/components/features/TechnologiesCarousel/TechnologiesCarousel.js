@@ -4,7 +4,7 @@ import { TechnologyData } from './TechnologyData';
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
 export const TechnologiesCarousel = ({ technologies }) => {
-  const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(2);
   const length = technologies.length;
 
   const nextSlide = () => {
@@ -19,30 +19,32 @@ export const TechnologiesCarousel = ({ technologies }) => {
     return null;
   }
   return (
-    <section className={styles.carousel}>
+    <section className={styles.container}>
       <FaArrowAltCircleLeft className={styles.left_arrow} onClick={prevSlide} />
       <FaArrowAltCircleRight
         className={styles.right_arrow}
         onClick={nextSlide}
       />
-      {TechnologyData.map((technology, index) => {
-        return (
-          <div
-            className={
-              index === current
-                ? styles.carousel__item_active
-                : styles.carousel__item
-            }
-            key={index}
-          >
-            <img
-              src={technology.image}
-              alt="technology"
-              className={styles.image}
-            />
-          </div>
-        );
-      })}
+      <div className={styles.carousel}>
+        {TechnologyData.map((technology, index) => {
+          return (
+            <div
+              className={
+                index === current
+                  ? styles.carousel__item_active
+                  : styles.carousel__item
+              }
+              key={index}
+            >
+              <img
+                src={technology.image}
+                alt="technology"
+                className={styles.image}
+              />
+            </div>
+          );
+        })}
+      </div>
     </section>
   );
 };
