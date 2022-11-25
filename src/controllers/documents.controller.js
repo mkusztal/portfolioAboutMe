@@ -1,6 +1,22 @@
 const Document = require('../models/documents.model');
 const fs = require('fs');
 
+// // download file
+// exports.getFile = async (req, res) => {
+//   try {
+//     const file = await Document.findById(req.params.id);
+
+//     if (!file) {
+//       return res.status(404).json({ message: 'Not found...' });
+//     }
+
+//     res.download();
+//   } catch (err) {
+//     res.status(500).json({ message: err.message });
+//   }
+// };
+
+// upload file
 exports.addDocument = async (req, res) => {
   const { fileName } = req.body;
   const isFile = req.file;

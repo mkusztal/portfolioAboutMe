@@ -13,7 +13,7 @@ const NavBar = () => {
         className={styles.logo}
         src="/images/ME_logo.png"
         alt="moni_entertainment_logo"
-      ></img>
+      />
       <nav>
         <ul className={styles.links}>
           <li>
@@ -25,6 +25,12 @@ const NavBar = () => {
           <li>
             <NavLink className={styles.navlink} to="/aboutme">
               About me
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink className={styles.navlink} to="/abilities">
+              Abilities
             </NavLink>
           </li>
 

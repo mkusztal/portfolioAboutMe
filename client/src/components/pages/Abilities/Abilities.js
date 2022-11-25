@@ -1,0 +1,37 @@
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import {
+  fetchTechnologies,
+  getTechnologies,
+} from '../../../redux/technologiesRedux';
+import { TechnologyCard } from '../../features/TechnologyCard/TechnologyCard';
+
+import styles from './Abilities.module.scss';
+
+const Abilities = () => {
+  const techData = useSelector(getTechnologies);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchTechnologies());
+  }, [dispatch]);
+
+  return (
+    <div className={styles.root}>
+      <div className={styles.technologies}>
+        {techData.map((data) => (
+          <div key={data._id}>
+            <TechnologyCard {...data} />
+          </div>
+        ))}
+      </div>
+
+      <p className={styles.rethinking}>
+        You can count years of experience, but not determination
+      </p>
+    </div>
+  );
+};
+
+export default Abilities;

@@ -11,7 +11,7 @@ export const TechnologyCard = ({ name, level }) => {
     };
 
     setStyle(newStyle);
-  }, 200);
+  }, 0);
   return (
     <div className={styles.progress}>
       <p>{name}</p>

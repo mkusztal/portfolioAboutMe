@@ -1,21 +1,7 @@
 import styles from './AboutMe.module.scss';
-import { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import {
-  fetchTechnologies,
-  getTechnologies,
-} from '../../../redux/technologiesRedux';
-import { TechnologyCard } from '../../features/TechnologyCard/TechnologyCard';
+import { Link } from 'react-router-dom';
 
 const AboutMe = () => {
-  const techData = useSelector(getTechnologies);
-
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchTechnologies());
-  }, [dispatch]);
-
   return (
     <div className={styles.root}>
       <img src="/images/me.png" alt="me" />
@@ -29,17 +15,25 @@ const AboutMe = () => {
             Backend Developer...
           </p>
         </div>
-        <div className={styles.technologies}>
-          {techData.map((data) => (
-            <div key={data._id}>
-              <TechnologyCard {...data} />
-            </div>
-          ))}
+        <div className={styles.documents}>
+          <ul className={styles.links}>
+            <li>
+              <button>
+                <Link className={styles.link}>CV</Link>
+              </button>
+            </li>
+            <li>
+              <button>
+                <Link className={styles.link}>Cover letter</Link>
+              </button>
+            </li>
+            <li>
+              <button>
+                <Link className={styles.link}>Certification</Link>
+              </button>
+            </li>
+          </ul>
         </div>
-
-        <p className={styles.rethinking}>
-          You can count years of experience, but not determination
-        </p>
       </div>
     </div>
   );

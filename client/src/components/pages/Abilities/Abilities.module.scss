@@ -1,0 +1,23 @@
+.root {
+  color: white;
+  .technologies {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 70px;
+  }
+
+  .rethinking {
+    display: flex;
+    max-width: 250px;
+    justify-content: center;
+    font-size: 7px;
+    margin: 30px auto;
+    // text-align: justify;
+  }
+
+  .rethinking:hover {
+    scale: 2;
+  }
+}
