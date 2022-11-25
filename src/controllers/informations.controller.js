@@ -1,5 +1,5 @@
 const Information = require('../models/informations.model');
-const getImageFileType = require('../utils/getImageFileType');
+const getImageFileType = require('../middleware/getImageFileType');
 const fs = require('fs');
 
 exports.getAllInformations = async (req, res) => {

@@ -1,14 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const imageUpload = require('../utils/imageUpload');
+const imageUpload = require('../middleware/imageUpload');
 const {
   getAllInformations,
   addInformation,
   updateInformation,
 } = require('../controllers/informations.controller');
 
-router.get('/informations', getAllInformations);
-router.post('/informations', imageUpload.single('photo'), addInformation);
-router.put('/informations/:id', imageUpload.single('photo'), updateInformation);
+router.get('/files', getAllInformations);
+router.post('/files', imageUpload.single('doc'), addInformation);
+router.put('/files/:id', imageUpload.single('doc'), updateInformation);
 
 module.exports = router;

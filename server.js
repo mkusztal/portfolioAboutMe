@@ -8,6 +8,7 @@ require('dotenv').config({ path: './.env' });
 const technologies = require('./src/routes/technologies.routes');
 const users = require('./src/routes/users.routes');
 const informations = require('./src/routes/informations.routes');
+const documents = require('./src/routes/documents.routes');
 
 // eslint-disable-next-line no-undef
 let uriDB = process.env.DB_URI;
@@ -59,6 +60,7 @@ app.use(
 app.use('/api', technologies);
 app.use('/api', users);
 app.use('/api', informations);
+app.use('/api', documents);
 
 app.use((req, res, next) => {
   req.db = db;
