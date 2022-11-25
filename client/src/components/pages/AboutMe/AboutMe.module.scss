@@ -2,8 +2,11 @@
 
 .root {
   color: white;
-  // min-height: 1000px;
-  margin-top: 70px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 70px;
 
   img {
     height: 300px;
@@ -15,9 +18,7 @@
 
   .documents {
     width: 500px;
-    position: relative;
-    left: 30%;
-    margin: 50px 0 50px 0;
+    margin: 150px 0 50px 0;
 
     .links {
       list-style: none;

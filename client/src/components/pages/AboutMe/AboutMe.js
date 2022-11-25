@@ -11,29 +11,29 @@ const AboutMe = () => {
             Hi! I'm <span>Maciej Kusztal</span>
           </h3>
           <p>
-            I'm Junior Full Stack Web Developer who is looking for Junior
+            I'm Junior Full Stack Web Developer who is looking for job as Junior
             Backend Developer...
           </p>
         </div>
-        <div className={styles.documents}>
-          <ul className={styles.links}>
-            <li>
-              <button>
-                <Link className={styles.link}>CV</Link>
-              </button>
-            </li>
-            <li>
-              <button>
-                <Link className={styles.link}>Cover letter</Link>
-              </button>
-            </li>
-            <li>
-              <button>
-                <Link className={styles.link}>Certification</Link>
-              </button>
-            </li>
-          </ul>
-        </div>
+      </div>
+      <div className={styles.documents}>
+        <ul className={styles.links}>
+          <li>
+            <button>
+              <Link className={styles.link}>CV</Link>
+            </button>
+          </li>
+          <li>
+            <button>
+              <Link className={styles.link}>Cover letter</Link>
+            </button>
+          </li>
+          <li>
+            <button>
+              <Link className={styles.link}>Certification</Link>
+            </button>
+          </li>
+        </ul>
       </div>
     </div>
   );
