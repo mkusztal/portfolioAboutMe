@@ -19,6 +19,7 @@ const Abilities = () => {
 
   return (
     <div className={styles.root}>
+      <h1 className={styles.title}>My Stack</h1>
       <div className={styles.technologies}>
         {techData.map((data) => (
           <div key={data._id}>
