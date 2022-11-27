@@ -12,14 +12,18 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const fd = new FormData();
-    fd.append('login', login);
-    fd.append('password', password);
-    fd.append('email', email);
+    const user = {
+      login,
+      password,
+      email,
+    };
 
     const options = {
       method: 'POST',
-      body: fd,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(user),
     };
 
     setStatus('loading');
@@ -41,31 +45,23 @@ const Register = () => {
   };
 
   return (
-    <form className={styles.form}>
+    <form className={styles.form} onSubmit={handleSubmit}>
       <div className={styles.container}>
         <h1 className={styles.title}>Sign Up</h1>
         <p className={styles.subtitle}>
           Please fill in this form to create an account.
         </p>
 
+        {status === 'success' && (
+          <div>
+            <p>You have been successfully logged!</p>
+          </div>
+        )}
+
         <div className={styles.input_container}>
-          <label for="email">
-            <b>Email</b>
-          </label>
-          <input
-            type="text"
-            placeholder="Enter Email"
-            name="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </div>
-        <div className={styles.input_container}>
-          <label for="psw-repeat">
+          <div className={styles.label}>
             <b>Login</b>
-          </label>
+          </div>
           <input
             type="text"
             placeholder="Enter Login"
@@ -78,9 +74,9 @@ const Register = () => {
         </div>
 
         <div className={styles.input_container}>
-          <label for="psw">
+          <div className={styles.label}>
             <b>Password</b>
-          </label>
+          </div>
           <input
             type="password"
             placeholder="Enter Password"
@@ -88,13 +84,27 @@ const Register = () => {
             id="psw"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            x
             required
           />
         </div>
 
-        <button type="submit" className={styles.submit} onClick={handleSubmit}>
-          Register
+        <div className={styles.input_container}>
+          <div className={styles.label}>
+            <b>Email</b>
+          </div>
+          <input
+            type="email"
+            placeholder="Enter Email"
+            name="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </div>
+
+        <button type="submit" className={styles.submit}>
+          Sign Up
         </button>
       </div>
     </form>
