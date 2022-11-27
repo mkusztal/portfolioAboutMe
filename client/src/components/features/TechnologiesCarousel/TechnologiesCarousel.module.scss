@@ -9,26 +9,6 @@
   border: 2px solid red;
   width: 70%;
 
-  .right_arrow {
-    position: absolute;
-    right: 20%;
-    font-size: 3rem;
-    color: #000;
-    z-index: 10;
-    cursor: pointer;
-    user-select: none;
-  }
-
-  .left_arrow {
-    position: absolute;
-    left: 20%;
-    font-size: 3rem;
-    color: #000;
-    z-index: 10;
-    cursor: pointer;
-    user-select: none;
-  }
-
   .carousel {
     display: flex;
     flex-direction: row;

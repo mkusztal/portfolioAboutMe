@@ -12,7 +12,7 @@ const AboutMe = () => {
           </h3>
           <p>
             I'm Junior Full Stack Web Developer who is looking for job as Junior
-            Backend Developer...
+            Node.js Backend Developer.<br></br>
           </p>
         </div>
       </div>
@@ -20,17 +20,38 @@ const AboutMe = () => {
         <ul className={styles.links}>
           <li>
             <button>
-              <Link className={styles.link}>CV</Link>
+              <a
+                href="https://drive.google.com/file/d/1_XkBho1NM-cvPjMfIHeEdIzVHN1IqkgC/view?usp=sharing"
+                className={styles.link}
+                rel="noreferrer"
+                target="_blank"
+              >
+                CV
+              </a>
             </button>
           </li>
           <li>
             <button>
-              <Link className={styles.link}>Cover letter</Link>
+              <a
+                href="https://drive.google.com/file/d/1X_tqTJ8muXufRJHCo4MymYUR418xP0wT/view?usp=sharing"
+                className={styles.link}
+                rel="noreferrer"
+                target="_blank"
+              >
+                Cover letter
+              </a>
             </button>
           </li>
           <li>
             <button>
-              <Link className={styles.link}>Certification</Link>
+              <a
+                href="https://drive.google.com/file/d/1IEYLQj5bdl4FP4CtPih-PRjZWTfnuO1h/view?usp=sharing"
+                className={styles.link}
+                rel="noreferrer"
+                target="_blank"
+              >
+                Certification
+              </a>
             </button>
           </li>
         </ul>

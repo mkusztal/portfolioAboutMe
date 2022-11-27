@@ -104,40 +104,40 @@ const Login = () => {
     //     </Form.Group>
     //   )}
     // </Form>
-    <form>
+    <form className={styles.form}>
       <div className={styles.container}>
-        <h1>Sign In</h1>
-        <label for="psw-repeat">
-          <b>Login</b>
-        </label>
-        <input
-          type="text"
-          placeholder="Enter Login"
-          name="login"
-          id="login"
-          value={login}
-          onChange={(e) => setLogin(e.target.value)}
-          required
-        />
+        <h1 className={styles.title}>Sign In</h1>
 
-        <label for="psw">
-          <b>Password</b>
-        </label>
-        <input
-          type="password"
-          placeholder="Enter Password"
-          name="psw"
-          id="psw"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
+        <div className={styles.input_container}>
+          <label for="psw-repeat">
+            <b>Login</b>
+          </label>
+          <input
+            type="text"
+            placeholder="Enter Login"
+            name="login"
+            id="login"
+            value={login}
+            onChange={(e) => setLogin(e.target.value)}
+            required
+          />
+        </div>
 
-        <button
-          type="submit"
-          className={styles.registerbtn}
-          onClick={handleSubmit}
-        >
+        <div className={styles.input_container}>
+          <label for="psw">
+            <b>Password</b>
+          </label>
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="psw"
+            id="psw"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </div>
+        <button type="submit" className={styles.submit} onClick={handleSubmit}>
           Register
         </button>
       </div>

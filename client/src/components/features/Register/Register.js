@@ -41,55 +41,59 @@ const Register = () => {
   };
 
   return (
-    <form>
+    <form className={styles.form}>
       <div className={styles.container}>
-        <h1>Sign Up</h1>
-        <p>Please fill in this form to create an account.</p>
+        <h1 className={styles.title}>Sign Up</h1>
+        <p className={styles.subtitle}>
+          Please fill in this form to create an account.
+        </p>
 
-        <label for="email">
-          <b>Email</b>
-        </label>
-        <input
-          type="text"
-          placeholder="Enter Email"
-          name="email"
-          id="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
+        <div className={styles.input_container}>
+          <label for="email">
+            <b>Email</b>
+          </label>
+          <input
+            type="text"
+            placeholder="Enter Email"
+            name="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </div>
+        <div className={styles.input_container}>
+          <label for="psw-repeat">
+            <b>Login</b>
+          </label>
+          <input
+            type="text"
+            placeholder="Enter Login"
+            name="login"
+            id="login"
+            value={login}
+            onChange={(e) => setLogin(e.target.value)}
+            required
+          />
+        </div>
 
-        <label for="psw-repeat">
-          <b>Login</b>
-        </label>
-        <input
-          type="text"
-          placeholder="Enter Login"
-          name="login"
-          id="login"
-          value={login}
-          onChange={(e) => setLogin(e.target.value)}
-          required
-        />
+        <div className={styles.input_container}>
+          <label for="psw">
+            <b>Password</b>
+          </label>
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="psw"
+            id="psw"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            x
+            required
+          />
+        </div>
 
-        <label for="psw">
-          <b>Password</b>
-        </label>
-        <input
-          type="password"
-          placeholder="Enter Password"
-          name="psw"
-          id="psw"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-
-        <button
-          type="submit"
-          className={styles.registerbtn}
-          onClick={handleSubmit}
-        >
+        <button type="submit" className={styles.submit} onClick={handleSubmit}>
           Register
         </button>
       </div>

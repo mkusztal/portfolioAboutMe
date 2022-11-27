@@ -56,6 +56,10 @@
         touch-action: manipulation;
         vertical-align: baseline;
         white-space: nowrap;
+
+        a {
+          padding: 30px;
+        }
       }
 
       button:hover,

@@ -1,7 +1,6 @@
 import styles from './TechnologiesCarousel.module.scss';
 import { useEffect, useRef, useState } from 'react';
 import { TechnologyData } from './TechnologyData';
-// import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
 export const TechnologiesCarousel = ({ technologies }) => {
   const [current, setCurrent] = useState(2);
