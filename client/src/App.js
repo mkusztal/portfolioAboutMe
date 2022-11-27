@@ -9,6 +9,7 @@ import Login from './components/features/Login/Login';
 import Logout from './components/features/Logout/Logout';
 import Footer from './components/layout/Footer/Footer';
 import Abilities from './components/pages/Abilities/Abilities';
+import Contact from './components/pages/Contact/Contact';
 
 export const App = () => {
   return (
@@ -18,6 +19,7 @@ export const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/aboutme" element={<AboutMe />} />
         <Route path="/abilities" element={<Abilities />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/logout" element={<Logout />} />
