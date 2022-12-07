@@ -62,9 +62,9 @@ const Login = () => {
         )}
 
         <div className={styles.input_container}>
-          <label>
+          <div className={styles.label}>
             <b>Login</b>
-          </label>
+          </div>
           <input
             type="text"
             placeholder="Enter Login"
@@ -77,9 +77,9 @@ const Login = () => {
         </div>
 
         <div className={styles.input_container}>
-          <label for="psw">
+          <div className={styles.label}>
             <b>Password</b>
-          </label>
+          </div>
           <input
             type="password"
             placeholder="Enter Password"

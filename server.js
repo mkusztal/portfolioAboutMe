@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 // const https = require('https');
+// const fs = require('fs');
 const mongoose = require('mongoose');
 const MongoStore = require('connect-mongo');
 const session = require('express-session');
@@ -17,6 +18,21 @@ let uriDB = process.env.DB_URI;
 let secretKey = process.env.EXPRESS_SESSION_SECRET;
 
 const app = express();
+
+// const server = https.createServer(
+//   {
+//     // eslint-disable-next-line no-undef
+//     key: fs.readFileSync(path.join(__dirname, 'cert', '/key.pem')),
+//     // eslint-disable-next-line no-undef
+//     cert: fs.readFileSync(path.join(__dirname, 'cert', '/cert.pem')),
+//   },
+//   app
+// );
+
+// // eslint-disable-next-line no-undef
+// server.listen(process.env.PORT || 8000, () => {
+//   console.log('Server is running...');
+// });
 
 // eslint-disable-next-line no-undef
 const server = app.listen(process.env.PORT || 8000, () => {

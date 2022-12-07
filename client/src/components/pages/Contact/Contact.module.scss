@@ -8,10 +8,9 @@
   justify-content: center;
   position: relative;
   left: 35%;
-  height: 100hv;
   padding: 20px;
   width: 400px;
-  margin: 50px 0 50px 0;
+  margin: 40px 0 50px 0;
 
   .container {
     display: flex;
@@ -23,7 +22,7 @@
       font-family: sans-serif;
       font-size: 36px;
       font-weight: 600;
-      margin-top: 30px;
+      margin-top: 10px;
     }
 
     .subtitle {
@@ -41,7 +40,7 @@
       margin-bottom: 40px;
     }
 
-    label {
+    .label {
       color: $text-color;
     }
 
