@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 const AdminData = () => {
   return (
     <div className={styles.root}>
-      <img src="/images/me.png" alt="me" />
+      {/* <img src="/images/background.png" alt="background"  className={styles.background}/> */}
+      <img src="/images/me.png" alt="me" className={styles.portrait}/>
       <div className={styles.rightColumn}>
         <div className={styles.text}>
           <h3>

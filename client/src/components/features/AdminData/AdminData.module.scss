@@ -7,12 +7,13 @@
   align-items: center;
   height: 100vh;
 
-  img {
+  .portrait {
     height: 300px;
     width: 300px;
     object-fit: scale-down;
     opacity: 0.8;
     border-radius: 400px;
+    filter: drop-shadow(0 0 0.75rem $text-hover-color);
   }
 
   .rightColumn {
