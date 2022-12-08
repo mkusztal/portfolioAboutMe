@@ -28,7 +28,9 @@ header {
     }
 
     .navlink:hover {
-      color: $button-color;
+      color: $text-hover-color;
+      border-bottom: 1px solid $text-hover-color;
+      padding-bottom: 5px;
     }
   }
 }
