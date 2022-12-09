@@ -1,7 +1,7 @@
-import styles from './AboutMe.module.scss';
-import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { getUser } from '../../../redux/userRedux';
+import styles from "./AboutMe.module.scss";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import { getUser } from "../../../redux/userRedux";
 
 const AboutMe = () => {
   const user = useSelector(getUser);
@@ -19,6 +19,11 @@ const AboutMe = () => {
             Node.js Backend Developer.<br></br>
           </p>
         </div>
+        {!user && (
+          <div>
+            <p>SIGN IN AND OPEN FILES</p>
+          </div>
+        )}
       </div>
       {user && (
         <div className={styles.documents}>
