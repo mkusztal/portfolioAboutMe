@@ -17,10 +17,10 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          return (<h1>{result.text}</h1>);
         },
         (error) => {
-          console.log(error.text);
+          return (<h1>{error.text}</h1>);
         }
       );
     e.target.reset();
