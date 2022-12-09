@@ -1,22 +1,38 @@
 export const TechnologyData = [
   {
-    image:
-      "https://w7.pngwing.com/pngs/640/199/png-transparent-javascript-logo-html-javascript-logo-angle-text-rectangle-thumbnail.png",
+    image: "https://assets.stickpng.com/thumbs/5847f5c3cef1014c0b5e489d.png",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1501446529957-6226bd447c46?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1489&q=80",
+    image: "https://assets.stickpng.com/thumbs/62b2221b038aad4d3ed7ca30.png",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80",
+    image: "https://assets.stickpng.com/thumbs/62a74dd1223343fbc2207d00.png",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1475189778702-5ec9941484ae?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1351&q=80",
+    image: "https://assets.stickpng.com/thumbs/62a75261223343fbc2207d09.png",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80",
+    image: "https://assets.stickpng.com/thumbs/5847f981cef1014c0b5e48be.png",
+  },
+  {
+    image: "https://assets.stickpng.com/thumbs/5847f98fcef1014c0b5e48c0.png",
+  },
+  {
+    image: "https://assets.stickpng.com/thumbs/613b64fe30e8530004ba3a03.png",
+  },
+  {
+    image: "https://assets.stickpng.com/thumbs/5848309bcef1014c0b5e4a9a.png",
+  },
+  {
+    image: "https://assets.stickpng.com/thumbs/62debc37ff3c6e4b8b5de8d2.png",
+  },
+  {
+    image: "https://assets.stickpng.com/thumbs/58481021cef1014c0b5e494b.png",
+  },
+  {
+    image: "https://assets.stickpng.com/thumbs/62a754b9223343fbc2207d0a.png",
+  },
+  {
+    image: "https://assets.stickpng.com/thumbs/62a9ad808ff6441a2952daba.png",
   },
 ];
