@@ -1,5 +1,5 @@
-const Technology = require('../models/technologies.model');
-const sanitize = require('mongo-sanitize');
+const Technology = require("../models/technologies.model");
+const sanitize = require("mongo-sanitize");
 
 exports.getAllTechnologies = async (req, res) => {
   try {
@@ -13,7 +13,7 @@ exports.getTechnologyById = async (req, res) => {
   try {
     const technology = await Technology.findById(req.params.id);
     if (!technology) {
-      return res.status(404).json({ message: 'Not found...' });
+      return res.status(404).json({ message: "Not found..." });
     }
     res.json(technology);
   } catch (err) {
@@ -27,7 +27,7 @@ exports.getTechnologyBySearch = async (req, res) => {
       $text: { $search: req.params.searchPhrase },
     });
     if (!technology) {
-      return res.status(404).json({ message: 'Not found...' });
+      return res.status(404).json({ message: "Not found..." });
     }
     res.json(technology);
   } catch (err) {
@@ -49,7 +49,7 @@ exports.addTechnology = async (req, res) => {
       await newTechnology.save();
       res.json(newTechnology);
     } else {
-      res.status(400).json({ message: 'Bad request' });
+      res.status(400).json({ message: "Bad request" });
     }
   } catch (err) {
     res.status(500).json({ message: err.message });
@@ -61,7 +61,7 @@ exports.updateTechnology = async (req, res) => {
   try {
     const technology = await Technology.findById(req.params.id);
     if (!technology) {
-      res.status(400).json({ message: 'Bad request' });
+      res.status(400).json({ message: "Bad request" });
     }
     await Technology.updateOne(
       { _id: req.params.id },
@@ -72,7 +72,7 @@ exports.updateTechnology = async (req, res) => {
         },
       }
     );
-    res.json({ message: 'OK' });
+    res.json({ message: "OK" });
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
@@ -82,10 +82,10 @@ exports.removeTechnologyById = async (req, res) => {
   try {
     const technology = await Technology.findById(req.params.id);
     if (!technology) {
-      return res.status(404).json({ message: 'Not found...' });
+      return res.status(404).json({ message: "Not found..." });
     }
     await Technology.deleteOne({ _id: req.params.id });
-    res.json({ message: 'OK' });
+    res.json({ message: "OK" });
   } catch (err) {
     res.status(500).json({ message: err.message });
   }

@@ -1,11 +1,11 @@
-import initialState from './initialState';
-import { API_URL } from '../config';
+import initialState from "./initialState";
+import { API_URL } from "../config";
 
 export const getTechnologies = ({ technologies }) => technologies;
 
 const createActionName = (actionName) => `app/technologies/${actionName}`;
-const UPDATE_TECHNOLOGY = createActionName('UPDATE_TECHNOLOGY');
-const SEARCH_TECHNOLOGY = createActionName('SEARCH_TECHNOLOGY');
+const UPDATE_TECHNOLOGY = createActionName("UPDATE_TECHNOLOGY");
+const SEARCH_TECHNOLOGY = createActionName("SEARCH_TECHNOLOGY");
 
 export const updateTechnologyById = (payload) => ({
   type: UPDATE_TECHNOLOGY,
@@ -18,7 +18,7 @@ export const getTechnologyBySearch = (payload) => ({
 
 export const fetchTechnologies = () => {
   return (dispatch) => {
-    fetch(API_URL + 'api/technologies')
+    fetch(API_URL + "api/technologies")
       .then((res) => res.json())
       .then((technologies) => dispatch(updateTechnologyById(technologies)));
   };

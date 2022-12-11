@@ -1,14 +1,14 @@
-import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
-import thunk from 'redux-thunk';
-import technologiesReducer from './technologiesRedux';
-import initialState from './initialState';
-import userReducer from './userRedux';
-import informationsReducer from './informationsRedux';
+import { createStore, combineReducers, applyMiddleware, compose } from "redux";
+import thunk from "redux-thunk";
+import technologiesReducer from "./technologiesRedux";
+import initialState from "./initialState";
+import userReducer from "./userRedux";
+import projectsReducer from "./projectsRedux";
 
 // combine reducers
 const subreducers = {
   technologies: technologiesReducer,
-  informations: informationsReducer,
+  projects: projectsReducer,
   user: userReducer,
 };
 

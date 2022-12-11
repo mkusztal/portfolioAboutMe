@@ -1,4 +1,5 @@
 const Project = require("../models/projects.model");
+const sanitize = require("mongo-sanitize");
 
 exports.getAllProjects = async (req, res) => {
   try {
@@ -8,7 +9,7 @@ exports.getAllProjects = async (req, res) => {
   }
 };
 
-exports.getProjectById = async (res, req) => {
+exports.getProjectById = async (req, res) => {
   try {
     const project = await Project.findById(req.params.id);
     if (!project) {
@@ -20,7 +21,7 @@ exports.getProjectById = async (res, req) => {
   }
 };
 
-exports.addProject = async (res, req) => {
+exports.addProject = async (req, res) => {
   const {
     name,
     shortDescription,
@@ -28,7 +29,7 @@ exports.addProject = async (res, req) => {
     technologies,
     linkGitHub,
     linkHeroku,
-  } = req.body;
+  } = sanitize(req.body);
   const isDataValid =
     name && shortDescription && description && technologies && linkGitHub;
   try {
@@ -51,7 +52,7 @@ exports.addProject = async (res, req) => {
   }
 };
 
-exports.updateProject = async (res, req) => {
+exports.updateProject = async (req, res) => {
   const {
     name,
     shortDescription,
