@@ -8,6 +8,10 @@ const projectsSchema = new mongoose.Schema({
     minlength: 3,
     maxlength: 20,
   },
+  description: { type: String, require: true, minlength: 3, maxlength: 150 },
+  technologies: { type: String, require: true },
+  linkGitHub: { type: String, require: true },
+  linkHeroku: { type: String, require: false },
 });
 
 projectsSchema.index({ name: "text" });

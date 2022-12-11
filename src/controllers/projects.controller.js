@@ -21,13 +21,25 @@ exports.getProjectById = async (res, req) => {
 };
 
 exports.addProject = async (res, req) => {
-  const { name, shortDescription } = req.body;
-  const isDataValid = name && shortDescription;
+  const {
+    name,
+    shortDescription,
+    description,
+    technologies,
+    linkGitHub,
+    linkHeroku,
+  } = req.body;
+  const isDataValid =
+    name && shortDescription && description && technologies && linkGitHub;
   try {
     if (isDataValid) {
       const newProject = new Project({
         name: name,
         shortDescription: shortDescription,
+        description: description,
+        technologies: technologies,
+        linkGitHub: linkGitHub,
+        linkHeroku: linkHeroku,
       });
       await newProject.save();
       res.json(newProject);
@@ -40,7 +52,14 @@ exports.addProject = async (res, req) => {
 };
 
 exports.updateProject = async (res, req) => {
-  const { name, shortDescription } = req.body;
+  const {
+    name,
+    shortDescription,
+    description,
+    technologies,
+    linkGitHub,
+    linkHeroku,
+  } = req.body;
 
   try {
     const project = await Project.findById(req.params.id);
@@ -49,7 +68,16 @@ exports.updateProject = async (res, req) => {
     }
     await Project.updateOne(
       { _id: req.params.id },
-      { $set: { name: name, shortDescription: shortDescription } }
+      {
+        $set: {
+          name: name,
+          shortDescription: shortDescription,
+          description: description,
+          technologies: technologies,
+          linkGitHub: linkGitHub,
+          linkHeroku: linkHeroku,
+        },
+      }
     );
     res.json({ message: "OK" });
   } catch (err) {
