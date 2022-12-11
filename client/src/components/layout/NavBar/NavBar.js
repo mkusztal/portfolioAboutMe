@@ -1,8 +1,8 @@
-import { useSelector } from 'react-redux';
-import { NavLink } from 'react-router-dom';
-import { getUser } from '../../../redux/userRedux';
+import { useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
+import { getUser } from "../../../redux/userRedux";
 
-import styles from './NavBar.module.scss';
+import styles from "./NavBar.module.scss";
 
 const NavBar = () => {
   const user = useSelector(getUser);
@@ -31,6 +31,12 @@ const NavBar = () => {
           <li>
             <NavLink className={styles.navlink} to="/abilities">
               Abilities
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink className={styles.navlink} to="/projects">
+              Projects
             </NavLink>
           </li>
 

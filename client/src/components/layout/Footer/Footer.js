@@ -1,10 +1,10 @@
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import styles from './Footer.module.scss';
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import styles from "./Footer.module.scss";
 
 const Footer = () => {
   return (
     <footer>
-      <p>Copyright &copy; Maciej Kusztal 2022</p>
+      <p className={styles.copyright}>Copyright &copy; Maciej Kusztal 2022</p>
       <div>
         <ul className={styles.links}>
           <li>

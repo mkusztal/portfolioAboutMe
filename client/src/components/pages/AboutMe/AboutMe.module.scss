@@ -1,4 +1,4 @@
-@import '../../../styles/variables.module.scss';
+@import "../../../styles/variables.module.scss";
 
 .root {
   color: white;
@@ -14,6 +14,55 @@
     object-fit: scale-down;
     opacity: 0.8;
     border-radius: 400px;
+  }
+
+  h3 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .description,
+  .info {
+    margin: auto;
+    width: 60%;
+  }
+
+  .info {
+    display: flex;
+    justify-content: center;
+    font-size: 16.5px;
+    margin-top: 40px;
+    width: 200px;
+    padding: 0;
+    border-bottom: 3px solid $text-hover-color;
+  }
+
+  .content {
+    margin: 50px;
+  }
+  a {
+    text-decoration: none;
+    color: $text-hover-color;
+    margin: auto;
+    width: 60%;
+  }
+
+  i {
+    margin-left: 10px;
+  }
+  i:hover {
+    color: $button-color;
+  }
+
+  .expandable {
+    overflow: hidden;
+    line-height: 50px;
+    transition: all 0.5s ease-in-out;
+    height: 0;
+  }
+
+  .expandable:target {
+    height: auto;
   }
 
   .documents {
@@ -40,7 +89,7 @@
         color: #fff;
         cursor: pointer;
         display: inline-block;
-        font-family: -apple-system, system-ui, 'Segoe UI', 'Liberation Sans',
+        font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans",
           sans-serif;
         font-size: 13px;
         font-weight: 400;
