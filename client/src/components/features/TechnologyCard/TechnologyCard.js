@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import styles from './TechnologyCard.module.scss';
+import { useState } from "react";
+import styles from "./TechnologyCard.module.scss";
 
 export const TechnologyCard = ({ name, level }) => {
   const [style, setStyle] = useState({});

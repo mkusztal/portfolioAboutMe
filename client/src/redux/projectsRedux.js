@@ -11,7 +11,7 @@ export const updateProjectById = (payload) => ({
   payload,
 });
 
-export const fetchInformations = () => {
+export const fetchProjects = () => {
   return (dispatch) => {
     fetch(API_URL + "api/projects")
       .then((res) => res.json())
