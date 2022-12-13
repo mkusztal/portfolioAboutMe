@@ -1,0 +1,35 @@
+@import "../../../styles/variables.module.scss";
+
+.root {
+  border: 2px solid red;
+  border-radius: 25% 10%;
+  color: $text-color;
+  width: 400px;
+  height: 250px;
+  background-color: $project-bg-color;
+
+  .item {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .project_details {
+      margin-top: 20px;
+
+      .title {
+        position: relative;
+        left: 25%;
+      }
+      p {
+        font-style: italic;
+        padding: 0 20px 0 20px;
+      }
+    }
+
+    button {
+      margin-top: 20px;
+    }
+  }
+}

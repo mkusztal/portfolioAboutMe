@@ -27,35 +27,5 @@
         color: $text-hover-color;
       }
     }
-
-    .button {
-      background-color: $text-hover-color;
-      border: 1px solid transparent;
-      border-radius: 3px;
-      box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0 0 inset;
-      color: white;
-      cursor: pointer;
-      display: inline-block;
-      font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans",
-        sans-serif;
-      font-size: 18px;
-      font-weight: 600;
-      position: relative;
-      text-align: center;
-    }
-
-    .button:hover,
-    .button:focus {
-      background-color: #07c;
-    }
-
-    .button:focus {
-      box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
-    }
-
-    .button:active {
-      background-color: #0064bd;
-      box-shadow: none;
-    }
   }
 }

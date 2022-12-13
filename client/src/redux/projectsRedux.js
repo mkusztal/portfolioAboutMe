@@ -2,6 +2,8 @@ import initialState from "./initialState";
 import { API_URL } from "../config";
 
 export const getProjects = ({ projects }) => projects;
+export const getProjectById = ({ projects }, projectId) =>
+  projects.find((project) => project._id === projectId);
 
 const createActionName = (actionName) => `app/projects/${actionName}`;
 const UPDATE_PROJECT = createActionName("UPDATE_PROJECT");

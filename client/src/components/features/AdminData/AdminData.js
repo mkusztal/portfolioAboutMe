@@ -1,11 +1,12 @@
-import styles from './AdminData.module.scss';
-import { Link } from 'react-router-dom';
+import styles from "./AdminData.module.scss";
+import { Link } from "react-router-dom";
+import Button from "../../common/Button/Button";
 
 const AdminData = () => {
   return (
     <div className={styles.root}>
       {/* <img src="/images/background.png" alt="background"  className={styles.background}/> */}
-      <img src="/images/me.png" alt="me" className={styles.portrait}/>
+      <img src="/images/me.png" alt="me" className={styles.portrait} />
       <div className={styles.rightColumn}>
         <div className={styles.text}>
           <h3>
@@ -17,8 +18,8 @@ const AdminData = () => {
           </p>
         </div>
 
-        <Link to={'/aboutme'}>
-          <button className={styles.button}>Read Me</button>
+        <Link to={"/aboutme"}>
+          <Button />
         </Link>
       </div>
     </div>

@@ -1,22 +1,26 @@
 import styles from "./ProjectCard.module.scss";
+import Button from "../../common/Button/Button";
+import { Link } from "react-router-dom";
 
-const ProjectCard = ({ name, shortDescription }) => {
+const ProjectCard = ({ name, shortDescription, _id }) => {
   return (
     <section className={styles.root}>
-      <div className="basket">
-        <div className="basket-product">
-          <div className="item">
-            <div class="product-image">
+      <div className={styles.card}>
+        <div className={styles.card_project}>
+          <div className={styles.item}>
+            <div className={styles.project_image}>
               <img src="" alt="Placholder" className="product-frame" />
             </div>
-            <div class="product-details">
-              <h1>
-                <strong>{name}</strong>{" "}
-              </h1>
+            <div className={styles.project_details}>
+              <h3>
+                <strong className={styles.title}>{name}</strong>{" "}
+              </h3>
               <p>{shortDescription}</p>
             </div>
+            <Link to={"/projects/" + _id}>
+              <Button />
+            </Link>
           </div>
-          <button>Read more</button>
         </div>
       </div>
     </section>

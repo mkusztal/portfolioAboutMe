@@ -15,7 +15,7 @@ const Projects = () => {
 
   return (
     <section className={styles.root}>
-      <h1 className={styles.title}>My Stack</h1>
+      <h1 className={styles.title}>My projects</h1>
       <div className={styles.technologies}>
         {projectData.map((data) => (
           <div key={data._id}>
