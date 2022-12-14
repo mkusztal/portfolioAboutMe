@@ -3,7 +3,6 @@ import ProjectCard from "../../features/ProjectCard/ProjectCard";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchProjects, getProjects } from "../../../redux/projectsRedux";
-import { useParams } from "react-router-dom";
 
 const Projects = () => {
   const projectData = useSelector(getProjects);

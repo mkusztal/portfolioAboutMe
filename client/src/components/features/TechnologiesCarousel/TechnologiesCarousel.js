@@ -8,7 +8,7 @@ export const TechnologiesCarousel = () => {
     <section className={styles.root}>
       <div className={styles.marquee}>
         <div className={styles.marquee_inner}>
-          <span>
+          {/* <span>
             {TechnologyData.map((technology, index) => {
               return (
                 <div className={styles.orb} key={index}>
@@ -33,7 +33,7 @@ export const TechnologiesCarousel = () => {
                 </div>
               );
             })}
-          </span>
+          </span> */}
         </div>
       </div>
     </section>
