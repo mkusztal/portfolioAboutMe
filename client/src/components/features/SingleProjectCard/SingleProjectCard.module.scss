@@ -1,0 +1,36 @@
+@import "../../../styles/variables.module.scss";
+
+.root {
+  color: white;
+  height: 637px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .title {
+    font-style: italic;
+    font-size: 54px;
+    color: $text-hover-color;
+  }
+
+  .technologies {
+    span {
+      border-bottom: 2px solid $text-hover-color;
+    }
+  }
+
+  .links {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    a {
+      color: $text-hover-color;
+    }
+
+    a:hover {
+      color: $button-color;
+    }
+  }
+}
