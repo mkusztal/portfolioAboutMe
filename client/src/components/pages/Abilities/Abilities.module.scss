@@ -1,16 +1,22 @@
 .root {
   color: white;
-  height: 637px;
+  height: 727px;
   .title {
     margin: 50px;
   }
 
   .technologies {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
     margin: 50px;
+    .cards {
+      position: relative;
+      left: 3%;
+      flex: 1 1 auto;
+      margin: 5px;
+    }
   }
 
   .rethinking {
@@ -19,10 +25,9 @@
     justify-content: center;
     font-size: 7px;
     margin: 30px auto;
-    // text-align: justify;
   }
 
   .rethinking:hover {
-    scale: 2;
+    scale: 3;
   }
 }
