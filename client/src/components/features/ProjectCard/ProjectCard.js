@@ -8,9 +8,6 @@ const ProjectCard = ({ name, shortDescription, _id }) => {
       <div className={styles.card}>
         <div className={styles.card_project}>
           <div className={styles.item}>
-            <div className={styles.project_image}>
-              <img src="" alt="Placholder" className="product-frame" />
-            </div>
             <div className={styles.project_details}>
               <h3>
                 <strong className={styles.title}>{name}</strong>{" "}

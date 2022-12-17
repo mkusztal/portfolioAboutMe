@@ -8,7 +8,7 @@ const SingleProjectCard = ({ name, description, technologies, linkGitHub }) => {
         <h1 className={styles.title}>{name}</h1>
         <div className={styles.description}>{description}</div>
         <div className={styles.technologies}>
-          Used technologies: <span>{technologies}</span>
+          <br></br> Used technologies: <span>{technologies}</span>
         </div>
         <div className={styles.links}>
           <a href={linkGitHub} target="_blank" rel="noreferrer">
