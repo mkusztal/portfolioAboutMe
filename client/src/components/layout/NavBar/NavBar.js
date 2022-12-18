@@ -22,7 +22,7 @@ const NavBar = () => {
             </NavLink>
           </li>
 
-          <li className={styles.navlink}>
+          <li className={styles.dropdown}>
             About
             <div className={styles.dropdown_content}>
               <NavLink className={styles.navlink} to="/aboutme">

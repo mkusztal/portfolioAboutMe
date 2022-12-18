@@ -16,8 +16,6 @@ header {
 
   .links {
     list-style: none;
-    position: relative;
-    display: inline-block;
 
     .navlink {
       text-decoration: none;
@@ -36,6 +34,11 @@ header {
     }
   }
 
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
   .dropdown_content {
     display: none;
     position: absolute;
@@ -51,8 +54,11 @@ header {
     }
   }
 
-  .links:hover .dropdown_content {
+  .dropdown:hover .dropdown_content {
     display: flex;
     flex-direction: column;
+    color: $text-hover-color;
+    border: 1px solid $text-hover-color;
+    padding-bottom: 5px;
   }
 }
