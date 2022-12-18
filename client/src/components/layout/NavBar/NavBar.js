@@ -22,22 +22,19 @@ const NavBar = () => {
             </NavLink>
           </li>
 
-          <li>
-            <NavLink className={styles.navlink} to="/aboutme">
-              About me
-            </NavLink>
-          </li>
-
-          <li>
-            <NavLink className={styles.navlink} to="/abilities">
-              Abilities
-            </NavLink>
-          </li>
-
-          <li>
-            <NavLink className={styles.navlink} to="/projects">
-              Projects
-            </NavLink>
+          <li className={styles.navlink}>
+            About
+            <div className={styles.dropdown_content}>
+              <NavLink className={styles.navlink} to="/aboutme">
+                Me
+              </NavLink>
+              <NavLink className={styles.navlink} to="/abilities">
+                Abilities
+              </NavLink>
+              <NavLink className={styles.navlink} to="/projects">
+                Projects
+              </NavLink>
+            </div>
           </li>
 
           <li>
