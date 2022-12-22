@@ -1,6 +1,6 @@
 @import "../../../styles/variables.module.scss";
 
-header {
+.navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,7 +14,8 @@ header {
     height: 50px;
   }
 
-  .links {
+  .nav_menu,
+  .mobile_menu {
     list-style: none;
 
     .navlink {
@@ -32,6 +33,34 @@ header {
       border-bottom: 1px solid $text-hover-color;
       padding-bottom: 5px;
     }
+  }
+
+  .hamburger {
+    border: 0;
+    height: 25px;
+    width: 25px;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: $text-hover-color;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    /* // positions the icon to the right and center aligns it vertically */
+    position: absolute;
+    right: 10%;
+    top: 30px;
+    transform: translateY(-50%);
+    display: none;
+
+    .icon {
+      font-size: 12px;
+      position: absolute;
+      top: 30%;
+      left: 25%;
+    }
+  }
+
+  .hamburger:hover {
+    background-color: #2642af;
   }
 
   .dropdown {
@@ -60,5 +89,26 @@ header {
     color: $text-hover-color;
     border: 1px solid $text-hover-color;
     padding-bottom: 5px;
+  }
+}
+
+/* mobile */
+@media (max-width: 768px) and (max-width: 991px) {
+  .navigation {
+    .hamburger {
+      display: block;
+    }
+
+    .nav_menu ul {
+      display: none;
+    }
+
+    .mobile_menu {
+      li {
+        position: relative;
+        top: 7px;
+        font-size: 15px;
+      }
+    }
   }
 }
