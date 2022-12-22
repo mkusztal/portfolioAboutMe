@@ -41,30 +41,39 @@
 
   .content {
     margin: 50px;
-  }
-  a {
-    text-decoration: none;
-    color: $text-hover-color;
-    margin: auto;
-    width: 60%;
-  }
+    a {
+      text-decoration: none;
+      color: $text-hover-color;
+      margin: auto;
+      width: 60%;
+    }
 
-  i {
-    margin-left: 10px;
-  }
-  i:hover {
-    color: $button-color;
-  }
+    button {
+      border: none;
+      background: none;
+      color: $text-hover-color;
+    }
 
-  .expandable {
-    overflow: hidden;
-    line-height: 50px;
-    transition: all 0.5s ease-in-out;
-    height: 0;
-  }
+    i {
+      margin-left: 10px;
+    }
+    i:hover {
+      color: $button-color;
+    }
 
-  .expandable:target {
-    height: auto;
+    .expandable {
+      overflow: hidden;
+      line-height: 50px;
+      transition: all 0.5s ease-in-out;
+      height: 0;
+    }
+
+    .expandableOpen {
+      overflow: hidden;
+      line-height: 50px;
+      transition: all 0.5s ease-in-out;
+      height: auto;
+    }
   }
 
   .documents {

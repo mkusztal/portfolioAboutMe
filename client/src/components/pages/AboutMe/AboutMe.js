@@ -1,9 +1,11 @@
 import styles from "./AboutMe.module.scss";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
 import { getUser } from "../../../redux/userRedux";
+import { useState } from "react";
 
 const AboutMe = () => {
+  const [isOpenExperience, setIsOpenExperience] = useState(false);
+  const [isOpenSkills, setIsOpenSkills] = useState(false);
   const user = useSelector(getUser);
 
   return (
@@ -30,12 +32,17 @@ const AboutMe = () => {
       </div>
 
       <div id="content" className={styles.content}>
-        <a href="#nav">
-          <span>the most important experiences which affected me</span>
+        <span>the most important experiences which affected me</span>
+        <button onClick={() => setIsOpenExperience(!isOpenExperience)}>
           <i className="fa fa-angle-double-down"></i>
-        </a>
+        </button>
 
-        <div className={styles.expandable} id="nav">
+        <div
+          className={
+            isOpenExperience ? styles.expandableOpen : styles.expandable
+          }
+          id="nav"
+        >
           <ul>
             <li>
               <p>
@@ -57,12 +64,16 @@ const AboutMe = () => {
             </li>
           </ul>
         </div>
-        <a href="#nav2">
-          <span>skills improve at my work</span>
-          <i className="fa fa-angle-double-down"></i>
-        </a>
 
-        <div className={styles.expandable} id="nav2">
+        <span>skills improve at my work</span>
+        <button onClick={() => setIsOpenSkills(!isOpenSkills)}>
+          <i className="fa fa-angle-double-down"></i>
+        </button>
+
+        <div
+          className={isOpenSkills ? styles.expandableOpen : styles.expandable}
+          id="nav2"
+        >
           <ul>
             <li>
               <p>Calmness: I keep a cool head in stressful situations</p>
