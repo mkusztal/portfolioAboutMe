@@ -59,3 +59,15 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .root {
+    .marquee {
+      width: 500px;
+    }
+
+    .marquee_inner {
+      width: 400%;
+    }
+  }
+}
