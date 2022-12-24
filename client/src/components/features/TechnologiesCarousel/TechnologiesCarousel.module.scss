@@ -71,3 +71,23 @@
     }
   }
 }
+
+@media (max-width: 426px) {
+  .root {
+    .marquee {
+      width: 300px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .root {
+    .marquee {
+      width: 200px;
+    }
+
+    .marquee_inner {
+      width: 400%;
+    }
+  }
+}
