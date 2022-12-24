@@ -5,7 +5,6 @@ import Button from "../../common/Button/Button";
 const AdminData = () => {
   return (
     <div className={styles.root}>
-      {/* <img src="/images/background.png" alt="background"  className={styles.background}/> */}
       <img src="/images/me.png" alt="me" className={styles.portrait} />
       <div className={styles.rightColumn}>
         <div className={styles.text}>

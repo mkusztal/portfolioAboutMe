@@ -29,3 +29,37 @@
     }
   }
 }
+
+@media (max-width: 426px) {
+  .root {
+    height: 80vh;
+    display: block;
+    position: relative;
+    left: 25%;
+    top: 150px;
+    .portrait {
+      height: 200px;
+      width: 200px;
+      margin-bottom: 30px;
+    }
+
+    .rightColumn {
+      .text {
+        margin-right: 150px;
+      }
+    }
+  }
+}
+
+@media (max-width: 321px) {
+  .root {
+    left: 20%;
+    top: 150px;
+
+    .rightColumn {
+      .text {
+        margin-right: 80px;
+      }
+    }
+  }
+}
