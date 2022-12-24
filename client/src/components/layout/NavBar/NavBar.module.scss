@@ -21,6 +21,7 @@
     .navlink {
       text-decoration: none;
       color: $text-color;
+      padding: 5px;
     }
 
     li {
@@ -30,8 +31,9 @@
 
     .navlink:hover {
       color: $text-hover-color;
-      border-bottom: 1px solid $text-hover-color;
-      padding-bottom: 5px;
+      // border-bottom: 1px solid $text-hover-color;
+      text-decoration: underline solid 2px;
+      text-underline-offset: 8px;
     }
   }
 
@@ -76,11 +78,6 @@
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     padding: 12px 16px;
     z-index: 1;
-
-    li {
-      display: inline-block;
-      margin-right: 10px;
-    }
   }
 
   .dropdown:hover .dropdown_content {
