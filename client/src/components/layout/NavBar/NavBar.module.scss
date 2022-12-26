@@ -114,3 +114,14 @@
     }
   }
 }
+
+@media (max-width: 320px) {
+  .navigation {
+    .mobile_menu {
+      li {
+        font-size: 10px;
+        margin-right: 0;
+      }
+    }
+  }
+}
