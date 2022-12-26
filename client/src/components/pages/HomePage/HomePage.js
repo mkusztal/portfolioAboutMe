@@ -1,7 +1,6 @@
-import { TechnologiesCarousel } from '../../features/TechnologiesCarousel/TechnologiesCarousel';
-import { TechnologyData } from '../../features/TechnologiesCarousel/TechnologyData';
-import AdminData from '../../features/AdminData/AdminData';
-// import styles from './HomePage.module.scss';
+import { TechnologiesCarousel } from "../../features/TechnologiesCarousel/TechnologiesCarousel";
+import { TechnologyData } from "../../features/TechnologiesCarousel/TechnologyData";
+import AdminData from "../../features/AdminData/AdminData";
 
 const HomePage = () => {
   return (
