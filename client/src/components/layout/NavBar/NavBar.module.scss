@@ -29,6 +29,11 @@
       margin-right: 10px;
     }
 
+    .logout {
+      position: relative;
+      left: -8.5%;
+    }
+
     .navlink:hover {
       color: $text-hover-color;
       // border-bottom: 1px solid $text-hover-color;

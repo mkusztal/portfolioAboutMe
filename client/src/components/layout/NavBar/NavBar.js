@@ -65,7 +65,7 @@ const NavBar = () => {
             )}
           </li>
 
-          <li>
+          <li className={styles.logout}>
             {user && (
               <NavLink className={styles.navlink} to="/logout">
                 Logout
