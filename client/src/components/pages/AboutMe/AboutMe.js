@@ -14,7 +14,7 @@ const AboutMe = () => {
       <div className={styles.rightColumn}>
         <div className={styles.text}>
           <h3>
-            Hi! I'm <span>Maciej Kusztal</span>
+            Hi! I'm<span>Maciej Kusztal</span>
           </h3>
           <p className={styles.description}>
             I'm Junior Full Stack Web Developer who is looking for job as Junior

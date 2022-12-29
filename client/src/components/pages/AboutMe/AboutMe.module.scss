@@ -21,6 +21,11 @@
   h3 {
     display: flex;
     justify-content: center;
+
+    span {
+      color: $text-hover-color;
+      margin-left: 5px;
+    }
   }
 
   .description,
@@ -41,12 +46,6 @@
 
   .content {
     margin: 50px;
-    a {
-      text-decoration: none;
-      color: $text-hover-color;
-      margin: auto;
-      width: 60%;
-    }
 
     button {
       border: none;
@@ -135,6 +134,19 @@
         background-color: #0064bd;
         box-shadow: none;
       }
+    }
+  }
+}
+
+@media (max-width: 426px) {
+  .root {
+    .description,
+    .info {
+      width: 80%;
+    }
+
+    .content {
+      margin: 0;
     }
   }
 }
