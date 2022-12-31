@@ -1,9 +1,8 @@
-@import '../../../styles/variables.module.scss';
+@import "../../../styles/variables.module.scss";
 
 * {
   box-sizing: border-box;
 }
-
 .progress {
   border-radius: 20px;
   position: relative;
@@ -17,7 +16,7 @@
 
 .progress_done {
   background: linear-gradient(to left, $button-color, $text-hover-color);
-  box-shadow: 0 3px 3px -5px $button-color, 0 2px 5px  $text-hover-color;
+  box-shadow: 0 3px 3px -5px $button-color, 0 2px 5px $text-hover-color;
   border-radius: 20px;
   color: #fff;
   display: flex;
@@ -27,3 +26,10 @@
   width: 0;
   opacity: 0;
 }
+
+@media (max-width: 768px) {
+  .progress {
+    height: 20px;
+    width: 300px;
+  }
+} ;

@@ -1,6 +1,6 @@
 .root {
   color: white;
-  height: 727px;
+  height: 870px;
   .title {
     margin: 50px;
   }
@@ -29,5 +29,11 @@
 
   .rethinking:hover {
     scale: 3;
+  }
+}
+
+@media (max-width: 1024px) {
+  .root {
+    height: 100%;
   }
 }
