@@ -35,3 +35,22 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .root {
+    width: 320px;
+    height: 75%;
+
+    .item {
+      .project_details {
+        margin-top: 0;
+
+        p {
+          font-style: italic;
+          padding: 0;
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+}
