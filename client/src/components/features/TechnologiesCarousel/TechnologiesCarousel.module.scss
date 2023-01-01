@@ -1,3 +1,5 @@
+@import "../../../styles/variables.module.scss";
+
 .root {
   margin: 0;
   font-size: 42px;
@@ -8,12 +10,12 @@
   .marquee {
     height: 200px;
     width: 800px;
-    border: 2px solid #eee;
+    border: 2px solid $text-hover-color;
     overflow: hidden;
     box-sizing: border-box;
     position: relative;
     margin: 200px auto;
-    background-color: rgb(98, 88, 88);
+    background-color: none;
   }
 
   .orb {

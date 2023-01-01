@@ -48,6 +48,7 @@
     padding: 0.5rem;
     border-radius: 50%;
     background-color: $text-hover-color;
+    color: $bg-brown;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
     /* // positions the icon to the right and center aligns it vertically */
@@ -61,12 +62,13 @@
       font-size: 12px;
       position: absolute;
       top: 30%;
-      left: 25%;
+      left: 27%;
     }
   }
 
   .hamburger:hover {
-    background-color: #2642af;
+    background-color: $bg-brown;
+    color: $text-hover-color;
   }
 
   .dropdown {
@@ -77,7 +79,7 @@
   .dropdown_content {
     display: none;
     position: absolute;
-    background-color: #585757;
+    background-color: none;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     padding: 12px 16px;

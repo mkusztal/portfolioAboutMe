@@ -1,12 +1,12 @@
 @import "../../../styles/variables.module.scss";
 
 .root {
-  border: 2px solid red;
+  border: 2px solid $text-hover-color;
   border-radius: 25% 10%;
   color: $text-color;
   width: 400px;
   height: 250px;
-  background-color: $project-bg-color;
+  background-color: $bg-brown;
   margin: 30px;
   .item {
     margin: 10px;

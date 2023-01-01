@@ -4,7 +4,7 @@
   min-height: 727px;
   height: 100%;
   .form {
-    background-color: #15172b;
+    background-color: $bg-brown;
     border-radius: 20px;
     box-sizing: border-box;
     display: flex;
@@ -60,11 +60,11 @@
       }
 
       input {
-        background-color: #303245;
+        background-color: $text-color;
         border-radius: 12px;
         border: 0;
         box-sizing: border-box;
-        color: $text-color;
+        color: $bg-brown;
         font-size: 18px;
         height: 100%;
         outline: 0;
@@ -91,11 +91,11 @@
       }
 
       .submit {
-        background-color: #08d;
+        background-color: $text-hover-color;
         border-radius: 12px;
         border: 0;
         box-sizing: border-box;
-        color: $text-color;
+        color: $bg-brown;
         cursor: pointer;
         font-size: 18px;
         height: 50px;
@@ -105,7 +105,7 @@
       }
 
       .submit:active {
-        background-color: #06b;
+        background-color: $text-color;
       }
     }
   }

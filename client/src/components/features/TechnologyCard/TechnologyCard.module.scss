@@ -15,8 +15,8 @@
 }
 
 .progress_done {
-  background: linear-gradient(to left, $button-color, $text-hover-color);
-  box-shadow: 0 3px 3px -5px $button-color, 0 2px 5px $text-hover-color;
+  background: linear-gradient(to left, $bg-brown, $text-hover-color);
+  box-shadow: 0 3px 3px -5px $bg-brown, 0 2px 5px $text-hover-color;
   border-radius: 20px;
   color: #fff;
   display: flex;

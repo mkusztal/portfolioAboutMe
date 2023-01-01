@@ -1,11 +1,11 @@
 @import "../../../styles/variables.module.scss";
 
 .button {
-  background-color: $text-hover-color;
+  background-color: $bg-brown;
   border: 1px solid transparent;
   border-radius: 3px;
   box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0 0 inset;
-  color: white;
+  color: $text-hover-color;
   cursor: pointer;
   display: inline-block;
   font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans",
@@ -18,7 +18,6 @@
 
 .button:hover,
 .button:focus {
-  // background-color: #0064bd;
   opacity: 0.9;
 }
 
