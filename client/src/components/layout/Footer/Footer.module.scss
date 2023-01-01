@@ -4,9 +4,10 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: $bg-brown;
+  color: $text-color;
   padding: 10px 0 0 20px;
-  background-color: $text-color;
+  background-color: $bg-brown;
+  border-top: 2px solid $text-hover-color;
 
   .copyright {
     font-size: 20px;
@@ -19,7 +20,7 @@ footer {
 
     .link {
       text-decoration: none;
-      color: $bg-brown;
+      color: $text-color;
     }
 
     li {
