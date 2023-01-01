@@ -18,7 +18,7 @@ const AdminData = () => {
         </div>
 
         <Link to={"/aboutme"}>
-          <Button />
+          <Button name="Read me" />
         </Link>
       </div>
     </div>

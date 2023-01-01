@@ -1,7 +1,7 @@
 import styles from "./Button.module.scss";
 
-const Button = () => {
-  return <button className={styles.button}>Read Me</button>;
+const Button = ({ name }) => {
+  return <button className={styles.button}>{name}</button>;
 };
 
 export default Button;

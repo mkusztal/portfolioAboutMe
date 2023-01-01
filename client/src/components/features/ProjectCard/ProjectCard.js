@@ -15,7 +15,7 @@ const ProjectCard = ({ name, shortDescription, _id }) => {
               <p>{shortDescription}</p>
             </div>
             <Link to={"/projects/" + _id}>
-              <Button />
+              <Button name="Read me" />
             </Link>
           </div>
         </div>
