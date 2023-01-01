@@ -1,11 +1,11 @@
 @import "../../../styles/variables.module.scss";
 
 .button {
-  background-color: $bg-brown;
+  background-color: $text-color;
   border: 1px solid transparent;
   border-radius: 3px;
   box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0 0 inset;
-  color: $text-hover-color;
+  color: $bg-brown;
   cursor: pointer;
   display: inline-block;
   font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans",

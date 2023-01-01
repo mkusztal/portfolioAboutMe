@@ -5,6 +5,7 @@
   height: 880px;
   .form {
     background-color: $bg-brown;
+    border: 2px solid $text-hover-color;
     border-radius: 20px;
     box-sizing: border-box;
     display: flex;
