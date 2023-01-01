@@ -62,6 +62,18 @@ const Login = () => {
             </div>
           )}
 
+          {status === "clientError" && (
+            <div className={styles.alert}>
+              <p>Login or password are incorrect!</p>
+            </div>
+          )}
+
+          {status === "serverErrors" && (
+            <div className={styles.alert}>
+              <p>Unexpected error... Try again!</p>
+            </div>
+          )}
+
           <div className={styles.input_container}>
             <div className={styles.label}>
               <b>Login</b>

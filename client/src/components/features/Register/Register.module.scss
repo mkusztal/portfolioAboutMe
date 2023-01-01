@@ -29,10 +29,15 @@
         margin-top: 30px;
       }
 
-      .info {
+      .info,
+      .alert {
         color: $text-color;
         text-decoration: underline solid 2px $text-hover-color;
         text-underline-offset: 8px;
+      }
+
+      .alert {
+        text-decoration: underline solid 2px $alert-color;
       }
 
       .subtitle {

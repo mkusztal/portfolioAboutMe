@@ -49,6 +49,33 @@ const Register = () => {
       <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.container}>
           <h1 className={styles.title}>Sign Up</h1>
+
+          {status === "success" && (
+            <div className={styles.info}>
+              <p>
+                You have been successfully registered! You can log in now...
+              </p>
+            </div>
+          )}
+
+          {status === "clientError" && (
+            <div className={styles.alert}>
+              <p>You have to fill all the fields</p>
+            </div>
+          )}
+
+          {status === "serverErrors" && (
+            <div className={styles.alert}>
+              <p>Unexpected error... Try again!</p>
+            </div>
+          )}
+
+          {status === "loginError" && (
+            <div className={styles.alert}>
+              <p>You have to use other login</p>
+            </div>
+          )}
+
           <p className={styles.subtitle}>
             Please fill in this form to create an account.
           </p>
