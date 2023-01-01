@@ -1,0 +1,19 @@
+@import "../../../styles/variables.module.scss";
+
+.submit {
+  background-color: $text-hover-color;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: $bg-brown;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  margin-top: 38px;
+  text-align: center;
+  width: 100%;
+}
+
+.submit:active {
+  background-color: $text-color;
+}

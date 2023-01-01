@@ -131,7 +131,11 @@ const Register = () => {
             />
           </div>
 
-          <button type="submit" className={styles.submit}>
+          <button
+            type="submit"
+            onClick={handleSubmit}
+            className={styles.submit}
+          >
             Sign Up
           </button>
         </div>
