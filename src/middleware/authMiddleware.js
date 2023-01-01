@@ -6,7 +6,7 @@ const authMiddleware = (req, res, next) => {
 
     next();
   } else {
-    res.status(401).json({ message: 'You are not authorized' });
+    res.status(401).json({ message: "You are not authorized" });
   }
 };
 

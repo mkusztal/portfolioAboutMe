@@ -57,7 +57,7 @@ const Login = () => {
           <h1 className={styles.title}>Sign In</h1>
 
           {status === "success" && (
-            <div>
+            <div className={styles.info}>
               <p>You have been successfully logged!</p>
             </div>
           )}

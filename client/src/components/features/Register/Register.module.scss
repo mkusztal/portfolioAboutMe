@@ -29,6 +29,12 @@
         margin-top: 30px;
       }
 
+      .info {
+        color: $text-color;
+        text-decoration: underline solid 2px $text-hover-color;
+        text-underline-offset: 8px;
+      }
+
       .subtitle {
         color: $text-color;
         font-family: sans-serif;
