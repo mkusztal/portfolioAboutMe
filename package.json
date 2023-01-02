@@ -5,9 +5,6 @@
   "main": "index.js",
   "author": "Maciej Kusztal",
   "license": "ISC",
-  "engines": {
-    "node": "18.12.1"
-  },
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
     "bcrypt": "^5.0.1",
