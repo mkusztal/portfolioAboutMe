@@ -5,6 +5,10 @@
   "main": "index.js",
   "author": "Maciej Kusztal",
   "license": "ISC",
+  "engines": {
+    "node": "16.15.1",
+    "npm": "9.2.0"
+  },
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
     "bcrypt": "^5.0.1",
@@ -33,7 +37,7 @@
   },
   "scripts": {
     "start": "nodemon server.js",
-    "build": "cd client && npm build",
+    "build": "cd client && npm run build",
     "test": "jest"
   },
   "devDependencies": {
