@@ -6,8 +6,8 @@
   "author": "Maciej Kusztal",
   "license": "ISC",
   "engines": {
-    "node": "16.15.1",
-    "npm": "9.2.0"
+    "node": "18.x",
+    "npm": "8.x"
   },
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
