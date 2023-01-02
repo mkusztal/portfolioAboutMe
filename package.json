@@ -6,7 +6,7 @@
   "author": "Maciej Kusztal",
   "license": "ISC",
   "engines": {
-    "node": "16.15.1"
+    "node": "18.12.1"
   },
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
