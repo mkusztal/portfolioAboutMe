@@ -1,6 +1,9 @@
 {
   "name": "myfs-portfolio",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.15.1"
+  },
   "description": "My Full Stack Website",
   "main": "index.js",
   "author": "Maciej Kusztal",
