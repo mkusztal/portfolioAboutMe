@@ -148,10 +148,10 @@
     .form {
       font-size: 12px;
       height: 500px;
-      width: 40%;
+      width: 60%;
       position: relative;
 
-      left: 30%;
+      left: 20%;
       top: 70px;
       padding: 20px;
       margin: 40px 0 50px 0;
@@ -178,3 +178,25 @@
     }
   }
 }
+
+@media (max-width: 321px) {
+  .root {
+    .form {
+      height: 80%;
+
+      .container {
+        input {
+          font-size: 12px;
+        }
+
+        .input_container {
+          margin-bottom: 20px;
+        }
+
+        .title {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+} ;
