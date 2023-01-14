@@ -54,3 +54,21 @@
     }
   }
 }
+
+@media (max-width: 321px) {
+  .root {
+    width: 250px;
+    height: 180px;
+    .item {
+      .project_details {
+        h3 {
+          font-size: 18px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
