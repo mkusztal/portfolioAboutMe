@@ -16,6 +16,7 @@
     object-fit: scale-down;
     opacity: 0.8;
     border-radius: 400px;
+    margin-bottom: 20px;
   }
 
   h3 {
@@ -129,11 +130,44 @@
   .root {
     .description,
     .info {
-      width: 80%;
+      width: 100%;
     }
 
     .content {
       margin: 0;
+    }
+  }
+}
+
+@media (max-width: 321px) {
+  .root {
+    img {
+      height: 200px;
+      width: 200px;
+      border-radius: 400%;
+    }
+    .rightColumn {
+      h3 {
+        font-size: 18px;
+      }
+      .description {
+        font-size: 14px;
+      }
+
+      .info {
+        font-size: 15px;
+      }
+    }
+
+    .content {
+      font-size: 14px;
+      span {
+        font-size: 14px;
+      }
+
+      .expandableOpen {
+        line-height: 20px;
+      }
     }
   }
 }
