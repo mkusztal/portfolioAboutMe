@@ -1,22 +1,24 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./TechnologyCard.module.scss";
 
-export const TechnologyCard = ({ name, level }) => {
+export const TechnologyCard = ({ name }) => {
   const [style, setStyle] = useState({});
 
-  setTimeout(() => {
-    const newStyle = {
-      opacity: 1,
-      width: `${level}%`,
-    };
+  useEffect(() => {
+    setTimeout(() => {
+      const newStyle = {
+        opacity: 1,
+        width: `${50}%`,
+      };
 
-    setStyle(newStyle);
-  }, 0);
+      setStyle(newStyle);
+    }, 0);
+  });
+
   return (
     <div className={styles.progress}>
-      <p>{name}</p>
       <div className={styles.progress_done} style={style}>
-        {level}%
+        <p>{name}</p>
       </div>
     </div>
   );
