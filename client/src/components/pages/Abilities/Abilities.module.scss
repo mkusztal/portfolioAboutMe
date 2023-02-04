@@ -37,3 +37,16 @@
     height: 100%;
   }
 }
+
+@media (max-width: 426px) {
+  .root {
+    height: 100%;
+
+    .technologies {
+      justify-content: center;
+    }
+    .rethinking:hover {
+      scale: 1.5;
+    }
+  }
+}

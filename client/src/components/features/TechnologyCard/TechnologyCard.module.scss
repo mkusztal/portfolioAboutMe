@@ -32,4 +32,10 @@
     height: 20px;
     width: 300px;
   }
+}
+
+@media (max-width: 426px) {
+  .progress {
+    width: 200px;
+  }
 } ;

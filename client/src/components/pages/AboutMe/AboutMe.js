@@ -99,7 +99,7 @@ const AboutMe = () => {
             <li>
               <button>
                 <a
-                  href="https://drive.google.com/file/d/1_XkBho1NM-cvPjMfIHeEdIzVHN1IqkgC/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1Z0dAkzovj3ZOQebFuXwY2XAwbeTUpQhX/view?usp=share_link"
                   className={styles.link}
                   rel="noreferrer"
                   target="_blank"

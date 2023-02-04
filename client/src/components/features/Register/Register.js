@@ -80,12 +80,6 @@ const Register = () => {
             Please fill in this form to create an account.
           </p>
 
-          {status === "success" && (
-            <div>
-              <p>You have been successfully logged!</p>
-            </div>
-          )}
-
           <div className={styles.input_container}>
             <div className={styles.label}>
               <b>Login</b>

@@ -66,14 +66,10 @@
     }
   }
 
-  .hamburger:hover {
-    background-color: $bg-brown;
-    color: $text-hover-color;
-  }
-
   .dropdown {
     position: relative;
     display: inline-block;
+    margin-bottom: 40px;
   }
 
   .dropdown_content {
@@ -116,7 +112,7 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 426px) {
   .navigation {
     .mobile_menu {
       li {

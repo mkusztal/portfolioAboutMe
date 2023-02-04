@@ -131,7 +131,7 @@
         }
 
         .subtitle {
-          font-size: 14px;
+          font-size: 12px;
         }
 
         .input_container {
@@ -140,7 +140,68 @@
           width: 80%;
           margin-bottom: 30px;
         }
+
+        .submit {
+          height: 40px;
+          font-size: 16px;
+        }
       }
     }
   }
-} ;
+}
+
+@media (max-width: 426px) {
+  .root {
+    .form {
+      left: 20%;
+      top: 80px;
+
+      width: 250px;
+      height: 400px;
+
+      .container {
+        .title {
+          font-size: 20px;
+        }
+
+        .subtitle {
+          font-size: 10px;
+        }
+
+        .input_container {
+          font-size: 14px;
+        }
+
+        input,
+        input::placeholder {
+          font-size: 14px;
+        }
+
+        .submit {
+          height: 40px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 376px) {
+  .root {
+    .form {
+      left: 18%;
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}
+
+@media (max-width: 321px) {
+  .root {
+    min-height: 612px;
+
+    .form {
+      left: 12%;
+    }
+  }
+}

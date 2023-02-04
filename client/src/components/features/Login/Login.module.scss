@@ -1,8 +1,9 @@
 @import "../../../styles/variables.module.scss";
 
 .root {
-  min-height: 737px;
-  height: 880px;
+  min-height: 727px;
+  height: 100%;
+
   .form {
     background-color: $bg-brown;
     border: 2px solid $text-hover-color;
@@ -12,10 +13,10 @@
     justify-content: center;
     position: relative;
     left: 35%;
-    top: 15%;
+
     padding: 20px;
     width: 400px;
-    margin: 40px 0 50px 0;
+    margin: 50px 0 50px 0;
 
     .container {
       display: flex;
@@ -27,7 +28,18 @@
         font-family: sans-serif;
         font-size: 36px;
         font-weight: 600;
-        margin-top: 10px;
+        margin-top: 30px;
+      }
+
+      .info,
+      .alert {
+        color: $text-color;
+        text-decoration: underline solid 2px $text-hover-color;
+        text-underline-offset: 8px;
+      }
+
+      .alert {
+        text-decoration: underline solid 2px $alert-color;
       }
 
       .subtitle {
@@ -97,44 +109,41 @@
       .submit:active {
         background-color: $text-color;
       }
-
-      textarea {
-        background-color: $text-color;
-        border-radius: 12px;
-        border: 0;
-        box-sizing: border-box;
-        color: $bg-brown;
-        font-size: 18px;
-        height: 80px;
-        max-height: 115px;
-        outline: 0;
-        padding: 4px 20px 0;
-        width: 100%;
-      }
     }
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .root {
+    min-height: 606px;
     height: 100%;
-
     .form {
-      font-size: 12px;
-      height: 500px;
-      width: 40%;
-      position: relative;
-
       left: 30%;
-      top: 70px;
+      top: 40px;
+
       padding: 20px;
-      margin: 40px 0 50px 0;
+      width: 300px;
+      height: 350px;
+      margin: 50px 0 50px 0;
       .container {
-        width: 85%;
-        input {
-          font-size: 14px;
-          height: 85%;
-          width: 85%;
+        .title {
+          font-size: 28px;
+        }
+
+        .subtitle {
+          font-size: 12px;
+        }
+
+        .input_container {
+          height: 30px;
+          position: relative;
+          width: 80%;
+          margin-bottom: 30px;
+        }
+
+        .submit {
+          height: 40px;
+          font-size: 16px;
         }
       }
     }
@@ -143,60 +152,56 @@
 
 @media (max-width: 426px) {
   .root {
-    height: 80%;
-
     .form {
-      font-size: 12px;
-      height: 500px;
-      width: 60%;
-      position: relative;
-
       left: 20%;
-      top: 70px;
-      padding: 20px;
-      margin: 40px 0 50px 0;
+      top: 80px;
+
+      width: 250px;
+      height: 300px;
+
       .container {
-        font-size: 10px;
-        width: 85%;
-        input {
-          font-size: 12px;
-          height: 85%;
-          width: 85%;
+        .title {
+          font-size: 20px;
         }
 
-        .submit {
-          height: 30px;
-          width: 80%;
+        .subtitle {
+          font-size: 10px;
+        }
+
+        .input_container {
           font-size: 14px;
         }
 
-        textarea {
-          font-size: 10px;
-          height: 70px;
+        input,
+        input::placeholder {
+          font-size: 14px;
+        }
+
+        .submit {
+          height: 40px;
+          font-size: 16px;
         }
       }
     }
   }
 }
 
-@media (max-width: 321px) {
+@media (max-width: 376px) {
   .root {
     .form {
-      height: 80%;
-
-      .container {
-        input {
-          font-size: 12px;
-        }
-
-        .input_container {
-          margin-bottom: 20px;
-        }
-
-        .title {
-          font-size: 24px;
-        }
-      }
+      left: 18%;
+      display: flex;
+      justify-content: space-around;
     }
   }
-} ;
+}
+
+@media (max-width: 321px) {
+  .root {
+    min-height: 612px;
+
+    .form {
+      left: 12%;
+    }
+  }
+}
