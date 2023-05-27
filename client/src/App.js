@@ -13,20 +13,20 @@ import Contact from "./components/pages/Contact/Contact";
 import Projects from "./components/pages/ProjectsPage/Projects";
 import SingleProjectPage from "./components/pages/SingleProjectPage/SingleProjectPage";
 
-export const App = () => {
+const App = () => {
   return (
     <div className={styles.root}>
       <NavBar />
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/aboutme" element={<AboutMe />} />
-        <Route path="/abilities" element={<Abilities />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/projects/:projectId" element={<SingleProjectPage />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/logout" element={<Logout />} />
+        <Route path='/' element={<HomePage />} />
+        <Route path='/aboutme' element={<AboutMe />} />
+        <Route path='/abilities' element={<Abilities />} />
+        <Route path='/projects' element={<Projects />} />
+        <Route path='/projects/:projectId' element={<SingleProjectPage />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/register' element={<Register />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/logout' element={<Logout />} />
       </Routes>
       <Footer />
     </div>

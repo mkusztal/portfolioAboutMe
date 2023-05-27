@@ -14,9 +14,9 @@ const SingleProjectCard = ({ name, description, technologies, linkGitHub }) => {
         </div>
         <div className={styles.links}>
           <Link to={"/projects"}>
-            <Button name="Back" />
+            <Button name='Back' />
           </Link>
-          <a href={linkGitHub} target="_blank" rel="noreferrer">
+          <a href={linkGitHub} target='_blank' rel='noreferrer'>
             <FaGithub />
           </a>
         </div>

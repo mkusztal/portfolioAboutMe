@@ -35,9 +35,5 @@
     "start": "nodemon server.js",
     "build": "cd client && npm install && npm run build",
     "test": "jest"
-  },
-  "devDependencies": {
-    "eslint": "^8.23.1",
-    "eslint-plugin-react": "^7.31.8"
   }
 }

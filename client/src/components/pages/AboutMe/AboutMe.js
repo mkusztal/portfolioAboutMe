@@ -10,7 +10,7 @@ const AboutMe = () => {
 
   return (
     <div className={styles.root}>
-      <img src="/images/me.png" alt="me" />
+      <img src='/images/me.png' alt='me' />
       <div className={styles.rightColumn}>
         <div className={styles.text}>
           <h3>
@@ -31,17 +31,17 @@ const AboutMe = () => {
         )}
       </div>
 
-      <div id="content" className={styles.content}>
+      <div id='content' className={styles.content}>
         <span>the most important experiences which affected me</span>
         <button onClick={() => setIsOpenExperience(!isOpenExperience)}>
-          <i className="fa fa-angle-double-down"></i>
+          <i className='fa fa-angle-double-down'></i>
         </button>
 
         <div
           className={
             isOpenExperience ? styles.expandableOpen : styles.expandable
           }
-          id="nav"
+          id='nav'
         >
           <ul>
             <li>
@@ -67,12 +67,12 @@ const AboutMe = () => {
 
         <span>skills improve at my work</span>
         <button onClick={() => setIsOpenSkills(!isOpenSkills)}>
-          <i className="fa fa-angle-double-down"></i>
+          <i className='fa fa-angle-double-down'></i>
         </button>
 
         <div
           className={isOpenSkills ? styles.expandableOpen : styles.expandable}
-          id="nav2"
+          id='nav2'
         >
           <ul>
             <li>
@@ -99,10 +99,10 @@ const AboutMe = () => {
             <li>
               <button>
                 <a
-                  href="https://drive.google.com/file/d/1Z0dAkzovj3ZOQebFuXwY2XAwbeTUpQhX/view?usp=share_link"
+                  href='https://drive.google.com/file/d/1Z0dAkzovj3ZOQebFuXwY2XAwbeTUpQhX/view?usp=share_link'
                   className={styles.link}
-                  rel="noreferrer"
-                  target="_blank"
+                  rel='noreferrer'
+                  target='_blank'
                 >
                   CV
                 </a>
@@ -111,10 +111,10 @@ const AboutMe = () => {
             <li>
               <button>
                 <a
-                  href="https://drive.google.com/file/d/1X_tqTJ8muXufRJHCo4MymYUR418xP0wT/view?usp=sharing"
+                  href='https://drive.google.com/file/d/1X_tqTJ8muXufRJHCo4MymYUR418xP0wT/view?usp=sharing'
                   className={styles.link}
-                  rel="noreferrer"
-                  target="_blank"
+                  rel='noreferrer'
+                  target='_blank'
                 >
                   Cover letter
                 </a>
@@ -123,10 +123,10 @@ const AboutMe = () => {
             <li>
               <button>
                 <a
-                  href="https://drive.google.com/file/d/1IEYLQj5bdl4FP4CtPih-PRjZWTfnuO1h/view?usp=sharing"
+                  href='https://drive.google.com/file/d/1IEYLQj5bdl4FP4CtPih-PRjZWTfnuO1h/view?usp=sharing'
                   className={styles.link}
-                  rel="noreferrer"
-                  target="_blank"
+                  rel='noreferrer'
+                  target='_blank'
                 >
                   Certification
                 </a>

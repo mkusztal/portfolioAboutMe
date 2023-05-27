@@ -80,10 +80,10 @@ const Login = () => {
               <b>Login</b>
             </div>
             <input
-              type="text"
-              placeholder="Enter Login"
-              name="login"
-              id="login"
+              type='text'
+              placeholder='Enter Login'
+              name='login'
+              id='login'
               value={login}
               onChange={(e) => setLogin(e.target.value)}
               required
@@ -95,17 +95,17 @@ const Login = () => {
               <b>Password</b>
             </div>
             <input
-              type="password"
-              placeholder="Enter Password"
-              name="psw"
-              id="psw"
+              type='password'
+              placeholder='Enter Password'
+              name='psw'
+              id='psw'
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
             />
           </div>
           <button
-            type="submit"
+            type='submit'
             className={styles.submit}
             onClick={handleSubmit}
           >
