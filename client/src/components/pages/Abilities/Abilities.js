@@ -27,10 +27,6 @@ const Abilities = () => {
           </div>
         ))}
       </div>
-
-      <p className={styles.rethinking}>
-        You can count years of experience, but not determination
-      </p>
     </div>
   );
 };
