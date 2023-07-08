@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
   fetchTechnologies,
@@ -7,9 +7,10 @@ import {
 import { TechnologyCard } from "../../features/TechnologyCard/TechnologyCard";
 
 import styles from "./Abilities.module.scss";
+import { ITechnologies } from "../../../interfaces/ITechnologies";
 
-const Abilities = () => {
-  const techData = useSelector(getTechnologies);
+export const Abilities: React.FC = () => {
+  const techData: ITechnologies[] = useSelector(getTechnologies);
 
   const dispatch = useDispatch();
 
@@ -21,14 +22,20 @@ const Abilities = () => {
     <div className={styles.root}>
       <h1 className={styles.title}>My Stack</h1>
       <div className={styles.technologies}>
-        {techData.map((data) => (
-          <div key={data._id} className={styles.cards}>
-            <TechnologyCard {...data} />
+        {techData ? (
+          techData.map((data) => {
+            return (
+              <div key={data._id} className={styles.cards}>
+                <TechnologyCard {...data} />
+              </div>
+            );
+          })
+        ) : (
+          <div>
+            <h1>No cards</h1>
           </div>
-        ))}
+        )}
       </div>
     </div>
   );
 };
-
-export default Abilities;

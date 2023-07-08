@@ -15,7 +15,6 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: "latest",
   },
   plugins: ["react", "@typescript-eslint"],
   rules: {
@@ -23,6 +22,7 @@ module.exports = {
     "react/react-in-jsx-scope": "off",
     "react/prop-types": 0,
     "react/no-unescaped-entities": 0,
+    "@typescript-eslint/no-explicit-any": ["off"],
   },
   settings: {
     react: {

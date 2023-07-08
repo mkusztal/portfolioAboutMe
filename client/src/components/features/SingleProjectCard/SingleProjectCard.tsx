@@ -2,8 +2,18 @@ import styles from "./SingleProjectCard.module.scss";
 import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Button from "../../common/Button/Button";
+import { ITechnologies } from "../../../interfaces/ITechnologies";
+// import { ITechnologies } from "../../../interfaces/ITechnologies";
 
-const SingleProjectCard = ({ name, description, technologies, linkGitHub }) => {
+type IProps = {
+  name: string;
+  description: string;
+  technologies: ITechnologies | any;
+  linkGitHub: string;
+};
+
+export const SingleProjectCard: React.FC<IProps> = (props) => {
+  const { name, description, technologies, linkGitHub } = props;
   return (
     <section className={styles.root}>
       <div className={styles.card}>
@@ -24,5 +34,3 @@ const SingleProjectCard = ({ name, description, technologies, linkGitHub }) => {
     </section>
   );
 };
-
-export default SingleProjectCard;

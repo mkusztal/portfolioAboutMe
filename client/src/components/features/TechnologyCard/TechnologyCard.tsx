@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from "react";
 import styles from "./TechnologyCard.module.scss";
-
-interface ITechnologyCard {
-  name: string;
-}
+import { ITechnologyCard } from "../../../interfaces/ITechnologyCard";
 
 interface Style {
   [key: string]: string | number;
 }
 
-const TechnologyCard: React.FC<ITechnologyCard> = ({ name }) => {
+export const TechnologyCard: React.FC<ITechnologyCard> = ({ name }) => {
   const [style, setStyle] = useState<React.CSSProperties>({});
 
   useEffect(() => {
@@ -31,5 +28,3 @@ const TechnologyCard: React.FC<ITechnologyCard> = ({ name }) => {
     </div>
   );
 };
-
-export default TechnologyCard;
