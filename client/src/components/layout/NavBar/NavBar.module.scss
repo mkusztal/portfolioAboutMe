@@ -43,8 +43,8 @@
 
   .hamburger {
     border: 0;
-    height: 25px;
-    width: 25px;
+    height: 40px;
+    width: 40px;
     padding: 0.5rem;
     border-radius: 50%;
     background-color: $text-hover-color;
@@ -57,13 +57,6 @@
     top: 30px;
     transform: translateY(-50%);
     display: none;
-
-    .icon {
-      font-size: 12px;
-      position: absolute;
-      top: 30%;
-      left: 27%;
-    }
   }
 
   .dropdown {

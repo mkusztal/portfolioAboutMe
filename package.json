@@ -2,7 +2,7 @@
   "name": "myfs-portfolio",
   "version": "1.0.0",
   "description": "My Full Stack Website",
-  "main": "index.js",
+  "main": "index.tsx",
   "author": "Maciej Kusztal",
   "license": "ISC",
   "dependencies": {

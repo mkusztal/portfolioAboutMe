@@ -1,12 +1,13 @@
 import styles from "./AboutMe.module.scss";
 import { useSelector } from "react-redux";
 import { getUser } from "../../../redux/userRedux";
-import { useState } from "react";
+import React, { useState } from "react";
+import { IUser } from "../../../interfaces/IUser";
 
-const AboutMe = () => {
+export const AboutMe: React.FC = () => {
   const [isOpenExperience, setIsOpenExperience] = useState(false);
   const [isOpenSkills, setIsOpenSkills] = useState(false);
-  const user = useSelector(getUser);
+  const user: IUser = useSelector(getUser);
 
   return (
     <div className={styles.root}>
@@ -138,5 +139,3 @@ const AboutMe = () => {
     </div>
   );
 };
-
-export default AboutMe;

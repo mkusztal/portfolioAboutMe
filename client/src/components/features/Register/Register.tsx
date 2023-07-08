@@ -1,25 +1,21 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { API_URL } from "../../../config";
-import { useDispatch } from "react-redux";
-import { logIn } from "../../../redux/userRedux";
-import { useNavigate } from "react-router-dom";
-// import styles from "../Register/Register.module.scss";
-import styles from "./Login.module.scss";
+import styles from "./Register.module.scss";
 
-const Login = () => {
-  const [login, setLogin] = useState("");
-  const [password, setPassword] = useState("");
-  const [status, setStatus] = useState(null); // null, loading, success, serverError, clientError
+export const Register: React.FC = () => {
+  const [login, setLogin] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
 
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
+  const [status, setStatus] = useState<string>(""); // null, loading, success, serverError, loginError, clientError
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
 
     const user = {
       login,
       password,
+      email,
     };
 
     const options = {
@@ -27,45 +23,44 @@ const Login = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      credentials: "include",
       body: JSON.stringify(user),
     };
 
     setStatus("loading");
-    fetch(`${API_URL}api/auth/login`, options)
+    fetch(`${API_URL}api/auth/register`, options)
       .then((res) => {
-        if (res.status === 200) {
+        if (res.status === 201) {
           setStatus("success");
-          dispatch(logIn({ login }));
-          setTimeout(() => {
-            navigate("/");
-          }, 2000);
         } else if (res.status === 400) {
           setStatus("clientError");
+        } else if (res.status === 409) {
+          setStatus("loginError");
         } else {
           setStatus("serverError");
         }
       })
-      .catch((err) => {
-        setStatus("serverError");
+      .catch((err: string) => {
+        setStatus("serverError: " + err);
       });
   };
 
   return (
     <section className={styles.root}>
-      <form className={styles.form}>
+      <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.container}>
-          <h1 className={styles.title}>Sign In</h1>
+          <h1 className={styles.title}>Sign Up</h1>
 
           {status === "success" && (
             <div className={styles.info}>
-              <p>You have been successfully logged!</p>
+              <p>
+                You have been successfully registered! You can log in now...
+              </p>
             </div>
           )}
 
           {status === "clientError" && (
             <div className={styles.alert}>
-              <p>Login or password are incorrect!</p>
+              <p>You have to fill all the fields</p>
             </div>
           )}
 
@@ -74,6 +69,16 @@ const Login = () => {
               <p>Unexpected error... Try again!</p>
             </div>
           )}
+
+          {status === "loginError" && (
+            <div className={styles.alert}>
+              <p>You have to use other login</p>
+            </div>
+          )}
+
+          <p className={styles.subtitle}>
+            Please fill in this form to create an account.
+          </p>
 
           <div className={styles.input_container}>
             <div className={styles.label}>
@@ -104,17 +109,31 @@ const Login = () => {
               required
             />
           </div>
+
+          <div className={styles.input_container}>
+            <div className={styles.label}>
+              <b>Email</b>
+            </div>
+            <input
+              type='email'
+              placeholder='Enter Email'
+              name='email'
+              id='email'
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+
           <button
             type='submit'
-            className={styles.submit}
             onClick={handleSubmit}
+            className={styles.submit}
           >
-            Sign In
+            Sign Up
           </button>
         </div>
       </form>
     </section>
   );
 };
-
-export default Login;

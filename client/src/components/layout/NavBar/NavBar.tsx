@@ -2,13 +2,14 @@ import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { getUser } from "../../../redux/userRedux";
 import { FaBars } from "react-icons/fa";
-import { useState } from "react";
+import React, { useState } from "react";
 
 import styles from "./NavBar.module.scss";
+import { IUser } from "../../../interfaces/IUser";
 
-const NavBar = () => {
+export const NavBar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const user = useSelector(getUser);
+  const user: IUser = useSelector(getUser);
 
   return (
     <nav className={styles.navigation}>
@@ -18,12 +19,12 @@ const NavBar = () => {
           setIsOpen(!isOpen);
         }}
       >
-        <FaBars className={styles.icon} />
+        <FaBars />
       </button>
       <div className={isOpen ? styles.mobile_menu : styles.nav_menu}>
         <ul className={styles.links}>
           <li>
-            <NavLink className={styles.navlink} to="/">
+            <NavLink className={styles.navlink} to='/'>
               Home
             </NavLink>
           </li>
@@ -31,27 +32,27 @@ const NavBar = () => {
           <li className={styles.dropdown}>
             About
             <div className={styles.dropdown_content}>
-              <NavLink className={styles.navlink} to="/aboutme">
+              <NavLink className={styles.navlink} to='/aboutme'>
                 Me
               </NavLink>
-              <NavLink className={styles.navlink} to="/abilities">
+              <NavLink className={styles.navlink} to='/abilities'>
                 Abilities
               </NavLink>
-              <NavLink className={styles.navlink} to="/projects">
+              <NavLink className={styles.navlink} to='/projects'>
                 Projects
               </NavLink>
             </div>
           </li>
 
           <li>
-            <NavLink className={styles.navlink} to="/contact">
+            <NavLink className={styles.navlink} to='/contact'>
               Contact
             </NavLink>
           </li>
 
           <li>
             {!user && (
-              <NavLink className={styles.navlink} to="/register">
+              <NavLink className={styles.navlink} to='/register'>
                 Register
               </NavLink>
             )}
@@ -59,7 +60,7 @@ const NavBar = () => {
 
           <li>
             {!user && (
-              <NavLink className={styles.navlink} to="/login">
+              <NavLink className={styles.navlink} to='/login'>
                 Login
               </NavLink>
             )}
@@ -67,7 +68,7 @@ const NavBar = () => {
 
           <li className={styles.logout}>
             {user && (
-              <NavLink className={styles.navlink} to="/logout">
+              <NavLink className={styles.navlink} to='/logout'>
                 Logout
               </NavLink>
             )}
@@ -77,5 +78,3 @@ const NavBar = () => {
     </nav>
   );
 };
-
-export default NavBar;

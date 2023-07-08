@@ -1,11 +1,11 @@
 import styles from "./Contact.module.scss";
-import { useRef } from "react";
+import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
-const Contact = () => {
-  const form = useRef();
+export const Contact: React.FC = () => {
+  const form: any = useRef();
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: any) => {
     e.preventDefault();
 
     emailjs
@@ -39,13 +39,13 @@ const Contact = () => {
             <div className={styles.label}>
               <b>Full name</b>
             </div>
-            <input type="text" id="name" placeholder="Full name" name="name" />
+            <input type='text' id='name' placeholder='Full name' name='name' />
           </div>
           <div className={styles.input_container}>
             <div className={styles.label}>
               <b>Email</b>
             </div>
-            <input type="email" id="email" placeholder="Email" name="email" />
+            <input type='email' id='email' placeholder='Email' name='email' />
           </div>
           <div className={styles.input_container}>
             <div className={styles.label}>
@@ -54,10 +54,10 @@ const Contact = () => {
               </b>
             </div>
             <input
-              type="test"
-              id="subject"
-              placeholder="Subject"
-              name="subject"
+              type='test'
+              id='subject'
+              placeholder='Subject'
+              name='subject'
             />
           </div>
           <div className={styles.input_container}>
@@ -65,14 +65,14 @@ const Contact = () => {
               <b>Message</b>
             </div>
             <textarea
-              id="message"
-              placeholder="Message..."
-              name="message"
-              cols="30"
-              rows="10"
+              id='message'
+              placeholder='Message...'
+              name='message'
+              cols={30}
+              rows={10}
             ></textarea>
           </div>
-          <button type="submit" className={styles.submit}>
+          <button type='submit' className={styles.submit}>
             Submit
           </button>
         </div>
@@ -80,5 +80,3 @@ const Contact = () => {
     </section>
   );
 };
-
-export default Contact;

@@ -1,7 +1,5 @@
-const initialState = {
+export const initialState: any = {
   technologies: [],
   projects: [],
   user: null,
 };
-
-export default initialState;
