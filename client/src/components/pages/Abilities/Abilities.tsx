@@ -11,7 +11,6 @@ import { ITechnologies } from "../../../interfaces/ITechnologies";
 
 export const Abilities: React.FC = () => {
   const techData: ITechnologies[] = useSelector(getTechnologies);
-
   const dispatch = useDispatch();
 
   useEffect(() => {
