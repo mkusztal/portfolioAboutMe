@@ -4,6 +4,7 @@ import { technologiesReducer } from "./technologiesRedux";
 import { initialState } from "./initialState";
 import { userReducer } from "./userRedux";
 import { projectsReducer } from "./projectsRedux";
+import { composeWithDevTools } from "redux-devtools-extension";
 
 // combine reducers
 const subreducers = {
@@ -17,10 +18,10 @@ const reducer = combineReducers(subreducers);
 export const store = createStore(
   reducer,
   initialState,
-  compose(
-    applyMiddleware(thunk),
-    (window as any).__REDUX_DEVTOOLS_EXTENSION__
-      ? (window as any).__REDUX_DEVTOOLS_EXTENSION__()
-      : (f: any) => f
+  composeWithDevTools(
+    applyMiddleware(thunk)
+    // (window as any).__REDUX_DEVTOOLS_EXTENSION__
+    //   ? (window as any).__REDUX_DEVTOOLS_EXTENSION__()
+    //   : (f: any) => f
   )
 );
