@@ -1,6 +1,6 @@
 import styles from "./AdminData.module.scss";
 import { Link } from "react-router-dom";
-import Button from "../../common/Button/Button";
+import { Button } from "../../common/Button/Button";
 import React from "react";
 
 export const AdminData: React.FC = () => {
@@ -13,8 +13,8 @@ export const AdminData: React.FC = () => {
             Hi! I'm <span>Maciej Kusztal</span>
           </h3>
           <p>
-            I'm Junior Full Stack Web Developer who is looking for Junior
-            Backend Developer...
+            I'm Frontend Developer who is working on Software Engineer
+            poistion...
           </p>
         </div>
 

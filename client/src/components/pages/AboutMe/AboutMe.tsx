@@ -18,11 +18,10 @@ export const AboutMe: React.FC = () => {
             Hi! I'm<span>Maciej Kusztal</span>
           </h3>
           <p className={styles.description}>
-            I'm Junior Full Stack Web Developer who is looking for job as Junior
-            Node.js Backend Developer.<br></br>I am an energetic and responsible
-            person. Through my determination and commitment to the exact
-            execution of the project, I believe that I am able to introduce
-            positive energy to the team.
+            I'm Frontend Developer who is working on Software Engineer poistion.
+            <br></br>I am an energetic and responsible person. Through my
+            determination and commitment to the exact execution of the project,
+            I believe that I am able to introduce positive energy to the team.
           </p>
         </div>
         {!user && (

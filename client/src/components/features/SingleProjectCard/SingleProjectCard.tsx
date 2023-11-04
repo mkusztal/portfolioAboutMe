@@ -1,7 +1,7 @@
 import styles from "./SingleProjectCard.module.scss";
 import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Button from "../../common/Button/Button";
+import { Button } from "../../common/Button/Button";
 import { ITechnologies } from "../../../interfaces/ITechnologies";
 // import { ITechnologies } from "../../../interfaces/ITechnologies";
 
