@@ -17,6 +17,7 @@ export const Abilities: React.FC = () => {
     dispatch(fetchTechnologies());
   }, [dispatch]);
 
+  console.log("tech", techData);
   return (
     <div className={styles.root}>
       <h1 className={styles.title}>My Stack</h1>

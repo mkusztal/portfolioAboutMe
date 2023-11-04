@@ -1,5 +1,5 @@
 import styles from "./ProjectCard.module.scss";
-import Button from "../../common/Button/Button";
+import { Button } from "../../common/Button/Button";
 import { Link } from "react-router-dom";
 import React from "react";
 

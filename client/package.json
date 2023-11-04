@@ -23,7 +23,6 @@
     "react-scripts": "^5.0.1",
     "reactstrap": "^9.1.4",
     "redux": "^4.2.0",
-    "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.4.1",
     "sass": "^1.54.9",
     "shortid": "^2.2.16",
@@ -34,6 +33,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test-storybook": "test-storybook",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -53,5 +53,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "redux-devtools-extension": "^2.13.9"
   }
 }
