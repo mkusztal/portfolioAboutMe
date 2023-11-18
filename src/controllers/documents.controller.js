@@ -1,5 +1,5 @@
-const Document = require('../models/documents.model');
-const fs = require('fs');
+const Document = require("../models/documents.model");
+const fs = require("fs");
 
 // // download file
 // exports.getFile = async (req, res) => {
@@ -15,6 +15,15 @@ const fs = require('fs');
 //     res.status(500).json({ message: err.message });
 //   }
 // };
+
+// gett all documents
+exports.getAllDocuments = async (req, res) => {
+  try {
+    res.json(await Document.find());
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
 
 // upload file
 exports.addDocument = async (req, res) => {
@@ -33,9 +42,10 @@ exports.addDocument = async (req, res) => {
       if (req.file) {
         fs.unlinkSync(`./public/uploads/${req.file.filename}`);
       }
-      res.status(400).json({ message: 'Bad request' });
+      res.status(400).json({ message: "Bad request" });
     }
   } catch (err) {
+    console.log("error: ", err);
     res.status(500).json({ message: err.message });
   }
 };

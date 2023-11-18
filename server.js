@@ -12,13 +12,12 @@ const users = require("./src/routes/users.routes");
 const documents = require("./src/routes/documents.routes");
 const projects = require("./src/routes/projects.routes");
 
-// eslint-disable-next-line no-undef
 let uriDB = process.env.DB_URI;
-// eslint-disable-next-line no-undef
 let secretKey = process.env.EXPRESS_SESSION_SECRET;
 
 const app = express();
 
+// HTTPS => use express!
 // const server = https.createServer(
 //   {
 //     // eslint-disable-next-line no-undef
@@ -45,6 +44,7 @@ mongoose.connect(uriDB, {
 });
 
 mongoose.set("autoIndex", true);
+mongoose.set("strictQuery", false);
 
 const sessionStore = MongoStore.create({
   mongoUrl: uriDB,
@@ -64,7 +64,6 @@ db.on("error", (err) => {
 app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-// eslint-disable-next-line no-undef
 app.use(express.static(path.join(__dirname, "/client/build")));
 app.use(
   session({
@@ -86,7 +85,6 @@ app.use((req, res, next) => {
 });
 
 app.get("*", (req, res) => {
-  // eslint-disable-next-line no-undef
   res.sendFile(path.join(__dirname + "/client/build/index.html"));
 });
 

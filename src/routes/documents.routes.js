@@ -1,8 +1,12 @@
-const express = require('express');
-const { addDocument } = require('../controllers/documents.controller');
+const express = require("express");
+const {
+  addDocument,
+  getAllDocuments,
+} = require("../controllers/documents.controller");
 const router = express.Router();
-const uploadFile = require('../middleware/uploadFile');
+const uploadFile = require("../middleware/uploadFile");
 
-router.post('/documents', uploadFile.single('document'), addDocument);
+router.get("/documents", getAllDocuments);
+router.post("/documents", uploadFile.single("document"), addDocument);
 
 module.exports = router;
