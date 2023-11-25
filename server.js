@@ -17,23 +17,20 @@ let secretKey = process.env.EXPRESS_SESSION_SECRET;
 
 const app = express();
 
-// HTTPS => use express!
-// const server = https.createServer(
-//   {
-//     // eslint-disable-next-line no-undef
-//     key: fs.readFileSync(path.join(__dirname, 'cert', '/key.pem')),
-//     // eslint-disable-next-line no-undef
-//     cert: fs.readFileSync(path.join(__dirname, 'cert', '/cert.pem')),
-//   },
-//   app
-// );
+// const options = {
+//   key: fs.readFileSync(path.join(__dirname, "ca-key.pem")),
+//   cert: fs.readFileSync(path.join(__dirname, "cert.pem")),
+//   passphrase: process.env.PASS_PHRASE,
+// };
+
+// //HTTPS => use express!
+// const server = https.createServer(options, app);
 
 // // eslint-disable-next-line no-undef
 // server.listen(process.env.PORT || 8000, () => {
-//   console.log('Server is running...');
+//   console.log("Server is running...");
 // });
 
-// eslint-disable-next-line no-undef
 const server = app.listen(process.env.PORT || 8000, () => {
   console.log("Server is running...");
 });
