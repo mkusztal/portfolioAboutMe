@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./TechnologiesCarousel.module.scss";
 import { TechnologyData } from "./TechnologyData";
-import "font-awesome/css/font-awesome.min.css";
 
 export const TechnologiesCarousel: React.FC = () => {
   return (
