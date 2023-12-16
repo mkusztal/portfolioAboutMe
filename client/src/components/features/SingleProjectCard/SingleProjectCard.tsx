@@ -3,7 +3,6 @@ import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { Button } from "../../common/Button/Button";
 import { ITechnologies } from "../../../interfaces/ITechnologies";
-// import { ITechnologies } from "../../../interfaces/ITechnologies";
 
 type IProps = {
   name: string;
