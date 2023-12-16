@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
         <ul className={styles.links}>
           <li>
             <a
-              href='https://github.com/sicArchitect'
+              href='https://github.com/mkusztal'
               target='_blank'
               rel='noopener noreferrer'
               className={styles.link}

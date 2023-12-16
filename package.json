@@ -8,6 +8,7 @@
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
     "bcrypt": "^5.0.1",
+    "commitlint": "^18.4.3",
     "connect-mongo": "^4.6.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.2",
@@ -25,8 +26,12 @@
     "react-icons": "^4.6.0"
   },
   "devDependencies": {
+    "chai": "^4.3.10",
+    "eslint": "^8.54.0",
+    "eslint-plugin-react": "^7.33.2",
     "husky": "^8.0.3",
-    "lint-staged": "^15.1.0"
+    "lint-staged": "^15.1.0",
+    "mocha": "^10.2.0"
   },
   "jest": {
     "moduleFileExtensions": [
@@ -39,17 +44,21 @@
   "scripts": {
     "start": "nodemon server.js",
     "build": "cd client && npm install && npm run build",
-    "test": "jest"
+    "test": "jest",
+    "lint": "npm run lint:code",
+    "lint:code": "eslint --ext=.js,.jsx,.ts,.tsx --color ./src/",
+    "lint:code:fix": "eslint --ext=.js,.jsx,.ts,.tsx --color ./src/",
+    "lint:code:staged": "eslint --ext=.js,.jsx,.ts,.tsx --color --fix"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "CI=true npm test"
     }
   },
   "lint-staged": {
-    "*.{js, ts, json, css, md, html}": [
-      "prettier --single-quote --write",
-      "git add"
+    "*.{js, jsx, ts,tsx}": [
+      "npm run lint:code:staged",
+      "prettier-standard"
     ]
   }
 }
