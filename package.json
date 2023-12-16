@@ -22,7 +22,6 @@
     "mongoose": "^6.6.1",
     "multer": "^1.4.5-lts.1",
     "node-modules": "^0.0.1",
-    "nodemon": "^2.0.22",
     "react-icons": "^4.6.0"
   },
   "devDependencies": {
@@ -31,7 +30,8 @@
     "eslint-plugin-react": "^7.33.2",
     "husky": "^8.0.3",
     "lint-staged": "^15.1.0",
-    "mocha": "^10.2.0"
+    "mocha": "^10.2.0",
+    "nodemon": "^3.0.2"
   },
   "jest": {
     "moduleFileExtensions": [
@@ -42,7 +42,7 @@
     "testEnvironment": "node"
   },
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "npx nodemon server.js",
     "build": "cd client && npm install && npm run build",
     "test": "jest",
     "lint": "npm run lint:code",
