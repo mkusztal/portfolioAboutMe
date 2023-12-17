@@ -33,7 +33,7 @@ jobs:
         run: npm run build --prefix client --if-present
 
       - name: Start Client
-        run: npm start --prefix client
+        run: npm start
 
       - name: Test Client
         run: npm test --prefix client
