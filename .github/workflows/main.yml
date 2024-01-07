@@ -24,16 +24,16 @@ jobs:
           cache: "npm"
 
       - name: Install Dependencies
-        run: |
-          cd client
-          npm install --production
-          cd ..
+        # run: |
+        #   cd client
+        #   npm run test
+        #   cd ..
 
       - name: Build Client
         run: npm run build --prefix client --if-present
 
-      - name: Start Client
-        run: npm start
+      # - name: Start Client
+      #   run: npm start
 
       - name: Test Client
         run: npm test --prefix client
