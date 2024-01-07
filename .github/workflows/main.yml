@@ -23,17 +23,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
 
-      - name: Install Dependencies
-        # run: |
-        #   cd client
-        #   npm run test
-        #   cd ..
-
       - name: Build Client
         run: npm run build --prefix client --if-present
-
-      # - name: Start Client
-      #   run: npm start
 
       - name: Test Client
         run: npm test --prefix client
