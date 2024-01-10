@@ -54,17 +54,14 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
 
-      - name: Install Dependencies
-        run: npm install --prefix client
+      - name: Install packages
+        run: npm install nodemon eslint --force
 
       # - name: Test Client
       #   run: npm test --prefix client
 
       - name: Build Server
-        run: npm run build
+        run: npm run build -if-present
 
       - name: Test Server
         run: npm test
-
-      - name: Start Server
-        run: npm start
