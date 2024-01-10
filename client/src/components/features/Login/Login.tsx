@@ -3,7 +3,6 @@ import { API_URL } from "../../../config";
 import { useDispatch } from "react-redux";
 import { logIn } from "../../../redux/userRedux";
 import { useNavigate } from "react-router-dom";
-// import styles from "../Register/Register.module.scss";
 import styles from "./Login.module.scss";
 
 export const Login: React.FC = () => {

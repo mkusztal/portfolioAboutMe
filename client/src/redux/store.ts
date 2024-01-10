@@ -1,4 +1,4 @@
-import { createStore, combineReducers, applyMiddleware, compose } from "redux";
+import { createStore, combineReducers, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { technologiesReducer } from "./technologiesRedux";
 import { initialState } from "./initialState";
@@ -18,10 +18,5 @@ const reducer = combineReducers(subreducers);
 export const store = createStore(
   reducer,
   initialState,
-  composeWithDevTools(
-    applyMiddleware(thunk)
-    // (window as any).__REDUX_DEVTOOLS_EXTENSION__
-    //   ? (window as any).__REDUX_DEVTOOLS_EXTENSION__()
-    //   : (f: any) => f
-  )
+  composeWithDevTools(applyMiddleware(thunk))
 );
