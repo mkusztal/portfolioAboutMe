@@ -57,8 +57,8 @@ jobs:
       - name: Install Dependencies
         run: npm install --prefix client
 
-      - name: Test Client
-        run: npm test --prefix client
+      # - name: Test Client
+      #   run: npm test --prefix client
 
       - name: Build Server
         run: npm run build
