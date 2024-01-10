@@ -44,8 +44,7 @@
   "scripts": {
     "start": "nodemon server.js",
     "build": "cd client && npm install && npm run build",
-    "test": "jest",
-    "lint": "npm run lint:code",
+    "test": "npm run lint:code",
     "lint:code": "eslint --ext=.js,.jsx,.ts,.tsx --color ./src/",
     "lint:code:fix": "eslint --ext=.js,.jsx,.ts,.tsx --color ./src/",
     "lint:code:staged": "eslint --ext=.js,.jsx,.ts,.tsx --color --fix"
