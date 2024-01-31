@@ -5,14 +5,15 @@
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: center;
-  height: 100vh;
+  height: 100%;
+  overflow-x: hidden;
 
   .portrait {
     height: 300px;
     width: 300px;
     object-fit: scale-down;
     opacity: 0.8;
-    border-radius: 400px;
+    border-radius: 50%;
     filter: drop-shadow(0 0 0.75rem $text-hover-color);
   }
 
@@ -30,13 +31,12 @@
   }
 }
 
-@media (max-width: 426px) {
+@media (max-width: 768px) {
   .root {
-    height: 80vh;
-    display: block;
-    position: relative;
-    left: 25%;
-    top: 150px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+
     .portrait {
       height: 200px;
       width: 200px;
@@ -44,17 +44,15 @@
     }
 
     .rightColumn {
-      .text {
-        margin-right: 150px;
-      }
+      margin-left: 50px;
     }
   }
 }
 
 @media (max-width: 321px) {
   .root {
-    left: 20%;
-    top: 150px;
+    // left: 20%;
+    // top: 150px;
 
     .rightColumn {
       .text {

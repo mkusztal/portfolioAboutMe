@@ -11,15 +11,15 @@ export const AboutMe: React.FC = () => {
 
   return (
     <div className={styles.root}>
-      <img src='/images/me.png' alt='me' />
+      <img src='/images/me.png' alt='me' className={styles.portrait} />
       <div className={styles.rightColumn}>
         <div className={styles.text}>
           <h3>
             Hi! I'm<span>Maciej Kusztal</span>
           </h3>
           <p className={styles.description}>
-            I'm Frontend Developer who is working on Software Engineer poistion.
-            <br></br>I am an energetic and responsible person. Through my
+            I'm Web Developer who is working on Software Engineer position.
+            <br />I am an energetic and responsible person. Through my
             determination and commitment to the exact execution of the project,
             I believe that I am able to introduce positive energy to the team.
           </p>
@@ -46,20 +46,20 @@ export const AboutMe: React.FC = () => {
           <ul>
             <li>
               <p>
-                Involvement: I feel responsible for the tasks assigned to me
+                Involvement: I feel responsible for the tasks assigned to me.
               </p>
             </li>
             <li>
               <p>
                 Enthusiasm: I am open to learning and working in a team, these
-                two things combined with goals and a plan motivate me to act
+                two things combined with goals and a plan motivate me to act.
               </p>
             </li>
             <li>
               <p>
-                Ambitious: I would like to become a Senior Backend Developer,
-                it’s a huge goal and has a long way, however, I know myself and
-                one day I will do it
+                Ambitious: I would like to become a Application Security
+                Engineer, it’s a huge goal and has a long way, however, I know
+                myself and one day I will do it.
               </p>
             </li>
           </ul>
@@ -99,24 +99,12 @@ export const AboutMe: React.FC = () => {
             <li>
               <button>
                 <a
-                  href='https://drive.google.com/file/d/1Z0dAkzovj3ZOQebFuXwY2XAwbeTUpQhX/view?usp=share_link'
+                  href='https://drive.google.com/file/d/1xvNm5y61KSuzVeCdCjyEYYoqQyTiBzO_/view?usp=drive_link'
                   className={styles.link}
                   rel='noreferrer'
                   target='_blank'
                 >
                   CV
-                </a>
-              </button>
-            </li>
-            <li>
-              <button>
-                <a
-                  href='https://drive.google.com/file/d/1X_tqTJ8muXufRJHCo4MymYUR418xP0wT/view?usp=sharing'
-                  className={styles.link}
-                  rel='noreferrer'
-                  target='_blank'
-                >
-                  Cover letter
                 </a>
               </button>
             </li>
