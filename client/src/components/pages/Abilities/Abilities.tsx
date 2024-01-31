@@ -11,18 +11,17 @@ import { ITechnologies } from "../../../interfaces/ITechnologies";
 
 export const Abilities: React.FC = () => {
   const techData: ITechnologies[] = useSelector(getTechnologies);
+  const validTechData = techData && techData.length > 0;
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchTechnologies());
   }, [dispatch]);
-
-  console.log("tech", techData);
   return (
     <div className={styles.root}>
       <h1 className={styles.title}>My Stack</h1>
       <div className={styles.technologies}>
-        {techData ? (
+        {validTechData ? (
           techData.map((data) => {
             return (
               <div key={data._id} className={styles.cards}>
@@ -32,7 +31,7 @@ export const Abilities: React.FC = () => {
           })
         ) : (
           <div>
-            <h1>No cards</h1>
+            <h1>No abilities</h1>
           </div>
         )}
       </div>

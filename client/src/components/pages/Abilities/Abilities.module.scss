@@ -1,34 +1,16 @@
 .root {
   color: white;
-  height: 870px;
+  height: 100%;
+
   .title {
     margin: 50px;
   }
 
   .technologies {
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 50px;
-    .cards {
-      position: relative;
-      left: 3%;
-      flex: 1 1 auto;
-      margin: 5px;
-    }
-  }
-
-  .rethinking {
-    display: flex;
-    max-width: 250px;
     justify-content: center;
-    font-size: 7px;
-    margin: 30px auto;
-  }
-
-  .rethinking:hover {
-    scale: 3;
+    flex-wrap: wrap;
+    margin: 0 0 50px 50px;
   }
 }
 
@@ -44,9 +26,6 @@
 
     .technologies {
       justify-content: center;
-    }
-    .rethinking:hover {
-      scale: 1.5;
     }
   }
 }

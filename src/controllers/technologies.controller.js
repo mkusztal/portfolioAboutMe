@@ -36,15 +36,14 @@ exports.getTechnologyBySearch = async (req, res) => {
 };
 
 exports.addTechnology = async (req, res) => {
-  const { name, level } = sanitize(req.body);
+  const { name } = sanitize(req.body);
 
-  const isDataValid = name && level;
+  const isDataValid = name;
 
   try {
     if (isDataValid) {
       const newTechnology = new Technology({
         name: name,
-        level: level,
       });
       await newTechnology.save();
       res.json(newTechnology);

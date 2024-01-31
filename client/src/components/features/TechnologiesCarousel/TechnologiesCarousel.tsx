@@ -23,8 +23,6 @@ export const TechnologiesCarousel: React.FC = () => {
             ) : (
               <div></div>
             )}
-          </span>
-          <span>
             {TechnologyData ? (
               TechnologyData.map((technology, index) => {
                 return (

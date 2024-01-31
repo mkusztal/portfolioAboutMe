@@ -3,20 +3,21 @@
 .root {
   color: white;
   min-height: 500px;
-  height: 70vh;
+  height: 100%;
   display: flex;
   justify-content: space-around;
   flex-direction: row;
   flex-wrap: wrap;
   margin: 70px;
 
-  img {
+  .portrait {
     height: 300px;
     width: 300px;
     object-fit: scale-down;
     opacity: 0.8;
     border-radius: 50%;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    filter: drop-shadow(0 0 0.75rem $text-hover-color);
   }
 
   h3 {
@@ -78,7 +79,7 @@
 
   .documents {
     width: 500px;
-    margin: 150px 0 50px 0;
+    margin: 50px 0 0 0;
 
     .links {
       list-style: none;
